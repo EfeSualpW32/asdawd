@@ -3,8 +3,15 @@ const db = require('quick.db');
 
 
 exports.run = async (client, message, args) => {
-  
-  if (!args[0]) return message.reply("Mevcut Markettekiler : \n\`\`\`\n bıçak : 4061 TL\n silah : 100000 TL\n haydar : 1600 TL\n\n MESLEK ↓\n\n Taxici : 1000 & 300 Tl Maaş\n Dolmuş : 1500 & 600 Tl Maaş\n Aşçı : 2200 & 1400 Tl Maaş\n Kuyumcu : 7000 & 5000 Tl Maaş\`\`\` ```bash\n \"Not\": Marketten Aldığınız Eşyalardan Fazla Almak Herhangi bişi ifade etmez \n``` ")
+  if(!message.guild){
+    var prefix = "?";
+  } else {
+  var prefix = db.fetch(`prefix_${message.guild.id}`);
+  if (!prefix) {
+    var prefix = "?";
+  }
+  };
+  if (!args[0]) return message.reply(`Mevcut Markettekiler :\n Satıb Almak İçin ${prefix}market (alınıcak meslek veya eşya)\n \n\`\`\`\n bıçak : 4061 TL\n silah : 100000 TL\n haydar : 1600 TL\n\n MESLEK ↓\n\n Taxici : 1000 & 300 Tl Maaş\n Dolmuş : 1500 & 600 Tl Maaş\n Aşçı : 2200 & 1400 Tl Maaş\n Kuyumcu : 7000 & 5000 Tl Maaş\`\`\` \`\`\`bash\n \"Not\": Marketten Aldığınız Eşyalardan Fazla Almak Herhangi bişi ifade etmez \n\`\`\``)
   
   if (args[0] === 'silah') {
      db.push(`silah_${message.author.id}`, "Var")
