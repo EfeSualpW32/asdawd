@@ -5,9 +5,9 @@ const ms = require('ms')
 exports.run = async (client, message, args) => {
   
 let kişi = message.mentions.users.first() || message.author
-let bıçak = await db.fetch(`bıçak_${message.author.id}`) || '0'
-let silah = await db.fetch(`silah_${message.author.id}`) || '0'
-let haydar = await db.fetch(`haydar_${message.author.id}`) || '0'
+let bıçak = await db.fetch(`bıçak_${message.author.id}`) || 'yok'
+let silah = await db.fetch(`silah_${message.author.id}`) || 'yok'
+let haydar = await db.fetch(`haydar_${message.author.id}`) || 'yok'
   let parapara = await db.fetch(`para_${kişi.id}`) || 0  
   /// ARKADASLAR CALMAYIN BIR CODER DERKI ÇALAN KODIR DEĞİL 
     let isim = await db.fetch(`hesapisim_${kişi.id}`) || 'Hesap Yok'
