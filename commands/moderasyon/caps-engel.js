@@ -24,6 +24,7 @@ exports.run = async (client, message, args) => {
 
 if (args[0] === 'kapat') {
   db.delete(`capslock_${message.guild.id}`)
+      db.push(`caps_${message.guild.id}`, 'kapalı')
 message.channel.send(new Discord.MessageEmbed().setColor(renk).setDescription("CapsLock Engel Sistemi Başarıyla Devre Dışı Bırakıldı <a:hayr:814802919542620211>\n İyi Sohbetler Dileriz"))
 return
 }

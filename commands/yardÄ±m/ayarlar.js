@@ -17,7 +17,7 @@ exports.run = async (client, message, args) => {
   const sgmk = new Discord.MessageEmbed()
    .setDescription(
 `Reklam Engel (${reklam})
-Küfür Engel (${caps})`)
+CapsLock Engel (${caps})`)
   message.channel.send(sgmk);
 };
 
