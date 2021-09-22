@@ -4,12 +4,12 @@ const db = require('quick.db');
 
 exports.run = async (client, message, args) => {
   
-  if (!args[0]) return message.reply(`Mevcut Markettekiler : \n\n\`\`\`\n bıçak : 500 TL\n silah : 1000 TL\n haydar : 150 TL\n\`\`\` **Not**: Marketten Aldığınız Eşyalardan Fazla Almak Herhangi bişi ifade etmez `)
+  if (!args[0]) return message.reply("Mevcut Markettekiler : \n\`\`\`\n bıçak : 4061 TL\n silah : 100000 TL\n haydar : 1600 TL\n\`\`\` ```bash\n \"Not\": Marketten Aldığınız Eşyalardan Fazla Almak Herhangi bişi ifade etmez \n``` ")
   
   if (args[0] === 'silah') {
      db.push(`silah_${message.author.id}`, "Var")
     let para = await db.get(`para_${message.author.id}`) 
-    let fiyatcık = 28000// istediğiniz fiyat
+    let fiyatcık = 100000// istediğiniz fiyat
     
     
     if (para < fiyatcık) return message.reply('Yeterli Paran Yok!')

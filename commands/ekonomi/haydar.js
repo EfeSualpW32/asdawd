@@ -7,7 +7,11 @@ const db = require('quick.db');
 const ms = require('ms')
 
 exports.run = async (client, message, args) => {
-  
+   if(db.fetch(`haydar_${message.author.id}`) == undefined) {var baltavar = "0"}
+    const engin = new Discord.MessageEmbed()
+    .setTitle('Eşya yok!')
+    .setDescription(`Elinde Haydar Eşyası olmadığından kullanamazsın!`)
+    if(db.fetch(`haydar_${message.author.id}`) == undefined) return message.channel.send(engin)
  var espriler = ["50","200","1000","1200","800","999","500","100"];
       var espri = espriler[Math.floor(Math.random() * espriler.length)];
 
