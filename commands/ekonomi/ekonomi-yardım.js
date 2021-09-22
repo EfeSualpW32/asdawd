@@ -11,18 +11,17 @@ exports.run = async(client, message) => {
   }
   };
     const y = new Discord.MessageEmbed()
-    .setA
+    .setAuthor('EFDA BASİT EKONOMİ')
     .setColor('RANDOM')
     .addField(':small_red_triangle_down:',`\`${prefix}günlük-para : Günlük Para (24 Saatte Bir Kullanılabilir)\``)
-    .addField(':small_red_triangle_down:',`\`!hesap-aç : Banka Hesap Açar (+20 Lira Verir)\``)
-    .addField(':small_red_triangle_down:',`\`!hesabımı-sil : Banka Hesabınızı Siler\``)
-    .addField(':small_red_triangle_down:',`\`hesap : Banka Hesabınız Hakkında Bilgi Verir\``)
-    .addField(':small_red_triangle_down:',`\`!para-gönder : Belirttiğiniz Kişiye Belirttiğiniz Miktarda Para Gönderir\``)
-    .addField(':small_red_triangle_down:',`\`!para : Bankadaki Paranızı Belirtir\``)
-    .addField(':small_red_triangle_down:',`\`!market : Markteti Gösterir\``)
-    .addField(':small_red_triangle_down:',`\`!istatistik : Botunuzun İstatistiklerini Gösterir\``)
+    .addField(':small_red_triangle_down:',`\`${prefix}hesap-aç : Banka Hesap Açar (+20 Lira Verir)\``)
+    .addField(':small_red_triangle_down:',`\`${prefix}hesabımı-sil : Banka Hesabınızı Siler\``)
+    .addField(':small_red_triangle_down:',`\`${prefix}hesap : Banka Hesabınız Hakkında Bilgi Verir\``)
+    .addField(':small_red_triangle_down:',`\`${prefix}para-gönder : Belirttiğiniz Kişiye Belirttiğiniz Miktarda Para Gönderir\``)
+    .addField(':small_red_triangle_down:',`\`${prefix}para : Bankadaki Paranızı Belirtir\``)
+    .addField(':small_red_triangle_down:',`\`${prefix}market : Markteti Gösterir\``)
     .setFooter(`${client.user.username}`, client.user.avatarURL)
-    .setThumbnail('https://cdn.discordapp.com/attachments/727202608133046415/727205052808298546/Kobs_server.png') 
+    .setThumbnail('https://cdn.glitch.com/478cc1e8-9c56-49a4-b910-3247fb1894aa%2Fezgif.com-gif-maker-6c3ab6491a5e480d7.gif?v=1621708715117') 
     return message.channel.send(y)
 };
 exports.conf = {

@@ -11,7 +11,7 @@ let kişi = message.mentions.users.first() || message.author
     let isim = await db.fetch(`hesapisim_${kişi.id}`) || 'Hesap Yok'
 
  const sa = new Discord.MessageEmbed()
- .setDescription(`Kullanıcı: ${kişi} \n Parası : ${parapara} \n Hesap Adı ${isim}`)
+ .setDescription(`Kullanıcı: ${kişi} \n Parası : ${parapara} \n Hesap Adı ${isim} \n Envanter : ${bıçak}`)
  return message.channel.send(sa)
 };
 ///HAZIRLAYANLAR Clearly_ , FORCEX.js

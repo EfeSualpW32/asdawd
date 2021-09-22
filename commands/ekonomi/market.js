@@ -21,6 +21,7 @@ exports.run = async (client, message, args) => {
     if (!args[0]) return message.reply(`Mevcut Markettekiler : `)
   
   if (args[0] === 'bıçak') {
+    let bıçak = await db.get(`bıcak_${message.author.id}`)
     let para = await db.get(`para_${message.author.id}`) 
     let fiyatcık = 500 // istediğiniz fiyat
     
