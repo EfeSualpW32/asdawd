@@ -27,6 +27,10 @@ exports.run = async (client, message, args) => {
     db.delete(`bıçak_${message.author.id}`)
     db.delete(`silah_${message.author.id}`)
     db.delete(`haydar_${message.author.id}`)
+      db.delete(`taxici_${message.author.id}`)
+      db.delete(`kuyumcu_${message.author.id}`)
+      db.delete(`aşçı_${message.author.id}`)
+      db.delete(`dolmuşcu_${message.author.id}`)
   db.delete(`hesapisim_${message.author.id}`)
   message.channel.send(`Hesabın Silindi`)
 }
