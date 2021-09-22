@@ -55,13 +55,13 @@ return message.channel.send(embed)
         if(!enginar) return message.channel.send('Küfür engel mesajı ayarlanmamış')
 if(db.has(`küfürengel_${message.guild.id}`)) return message.channel.send("Zaten açık!")
 db.set(`küfürengel_${message.guild.id}`, 'aktif')
-db.push(`küfürsw_${message.guild.id}`, 'Açık')
 const embed = new discord.MessageEmbed()
 .setTitle('Küfür engel sistemi açıldı!')
 .setDescription(`<@${message.author.id}> bu sunucuda küfür engel sistemini aktifleştirdi!`)
 .setColor('RANDOM')
 client.channels.cache.get(kontrol).send(embed)
 return message.channel.send('Küfür engel sistemi aktifleştirildi!')
+
 }
 //
 if(args[0] == "sıfırla") {

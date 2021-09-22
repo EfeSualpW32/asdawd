@@ -13,11 +13,11 @@ exports.run = async (client, message, args) => {
   }
   };
   let reklam = await db.fetch(`reklam_${message.guild.id}`) || 'Kapalı'
-  let küfür = await db.fetch(`küfürsw_${message.guild.id}`) || 'Kapalı'
+  let caps = await db.fetch(`caps_${message.guild.id}`) || 'Kapalı'
   const sgmk = new Discord.MessageEmbed()
    .setDescription(
 `Reklam Engel (${reklam})
-Küfür Engel (${küfür})`)
+Küfür Engel (${caps})`)
   message.channel.send(sgmk);
 };
 
