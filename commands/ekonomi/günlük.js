@@ -1,32 +1,52 @@
-const discord = require('discord.js')
-const { Database } =  require('nukleon')
-const  db  = new Database("plasmic.json");
-const talkedRecently = new Set();
-exports.run = async(client, message, args) => {
-    if (talkedRecently.has(message.author.id)) {
-        const embed = new discord.MessageEmbed()
-        .setTitle('Bekleme süresi')
-        .setDescription(`:clock12:  Bu komutu günde bir kere kullanabilirsin!`)
-        message.channel.send(embed);
-} else {
-db.add(`para_${message.author.id}`, 1000)
-const embed = new discord.MessageEmbed()
-.setTitle('Günlük Ödül')
-.setDescription(`${message.author.username} adlı kişi günlük ödülü olan 1000  :coin:  parasını cebine koydu!`)
-message.channel.send(embed)
-talkedRecently.add(message.author.id);
-setTimeout(() => {
-  talkedRecently.delete(message.author.id);
-}, 86400000);
-}
-}
-exports.conf = {
-    enabled: true,
-    guildOnly: false,
-    aliases: [],
-    permLevel: 0
-  };
+const Discord = require('discord.js');
+
+const ayarlar = require('../../config');
+
+const db = require('quick.db');
+
+const ms = require('ms')
+
+exports.run = async (client, message, args) => {
   
-  exports.help = {
-    name: 'günlük' 
-  }
+ var espriler = ['100','50','25','200','250','5','75'];
+      var espri = espriler[Math.floor(Math.random() * espriler.length)];
+
+  let yavaşmod = 8.64e+7, // 24 Saat
+
+        amount = Math.floor(Math.random() * 1000) + 4000;      
+
+
+    let lastDaily = await db.fetch(`günlükbea_${message.guild.id}`);
+
+    if (lastDaily !== null && yavaşmod - (Date.now() - lastDaily) > 0) {
+
+        let timeObj = ms(yavaşmod - (Date.now() - lastDaily));
+
+
+
+
+
+      return message.reply(`Her 24 Saate Bir Para Alabilirsin`)
+
+      
+
+    } else {
+
+      db.add(`para_${message.author.id}`, espri)
+message.channel.send(`${espri} Kadar Parayı Kaptın!`);
+}
+       db.set(`günlükbea_${message.guild.id}`, Date.now());
+
+    }
+
+
+
+
+exports.conf = {
+  aliases: [],
+  permLevel: 0
+};
+
+exports.help = {
+  name: 'günlük-para'
+};
