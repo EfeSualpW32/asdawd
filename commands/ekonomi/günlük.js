@@ -11,7 +11,7 @@ exports.run = async (client, message, args) => {
  var espriler = ['100','50','25','200','250','5','75'];
       var espri = espriler[Math.floor(Math.random() * espriler.length)];
 
-  let yavaşmod = 8.64e+7, // 24 Saat
+  let yavaşmod = 8.64+7, // 24 Saat
 
         amount = Math.floor(Math.random() * 1000) + 4000;      
 
