@@ -7,6 +7,7 @@ exports.run = async (client, message, args) => {
   if (!args[0]) return message.reply(`Mevcut Markettekiler : \n\n\`\`\`\n bıçak : 500 TL\n silah : 1000 TL\n haydar : 150 TL\n\`\`\``)
   
   if (args[0] === 'silah') {
+       let envanter = await db.fetch(`silah_${message.author.id}`,'silah')
     let para = await db.get(`para_${message.author.id}`) 
     let fiyatcık = 1000 // istediğiniz fiyat
     
@@ -21,7 +22,7 @@ exports.run = async (client, message, args) => {
     if (!args[0]) return message.reply(`Mevcut Markettekiler : `)
   
   if (args[0] === 'bıçak') {
-    let bıçak = await db.get(`bıcak_${message.author.id}`)
+    let envanter = await db.fetch(`bıcak_${message.author.id}`,'Bıçak')
     let para = await db.get(`para_${message.author.id}`) 
     let fiyatcık = 500 // istediğiniz fiyat
     
@@ -34,6 +35,7 @@ exports.run = async (client, message, args) => {
     return message.reply(`Ürünü Başarıyla Aldınız`)
   }
     if (args[0] === 'haydar') {
+         let envanter = await db.fetch(`haydar_${message.author.id}`,'haydar')
     let para = await db.get(`para_${message.author.id}`) 
     let fiyatcık = 150 // istediğiniz fiyat
     
