@@ -15,7 +15,7 @@ exports.run = async (client, message, args) => {
   if (!args[0]) return message.reply(new Discord.MessageEmbed().setColor("#36393f").setDescription(`Mevcut Markettekiler :\n Satın Almak İçin ${prefix}market (alınıcak meslek veya eşya)\n\n   **Paranız :** ${parapara}<:tl:891668420066672650>\n\n 🔪 **bıçak :** 4061<:tl:891668420066672650> \n 🔫 **silah :** 100000<:tl:891668420066672650>\n 🏏 **haydar :** 1600<:tl:891668420066672650>\n\n __**MESLEK**__ ↓\n\n 🚕 **Taxici :** 1000<:tl:891668420066672650> Maaş: \`300\`\n 🚐 **Dolmuş :** 1500<:tl:891668420066672650> Maaş: \`600\`\n 👩‍🍳 **Aşçı :** 2200<:tl:891668420066672650> Maaş: \`1400\`\n 💰 **Kuyumcu :** 7000<:tl:891668420066672650> Maaş: \`3000\` \`\`\`bash\n \"Not\": Marketten Aldığınız Eşyalardan Fazla Almak Herhangi bişi ifade etmez \n\`\`\``))
   
   if (args[0] === 'silah') {
-     db.push(`silah_${message.author.id}`, "Var")
+     db.add(`silah_${message.author.id}`, "1")
     let para = await db.get(`para_${message.author.id}`) 
     let fiyatcık = 100000// istediğiniz fiyat
     
@@ -30,7 +30,7 @@ exports.run = async (client, message, args) => {
     if (!args[0]) return message.reply(`Mevcut Markettekiler : `)
   
   if (args[0] === 'bıçak') {
-   db.push(`bıçak_${message.author.id}`, "Var")
+   db.add(`bıçak_${message.author.id}`, "1")
     let para = await db.get(`para_${message.author.id}`) 
     let fiyatcık = 4061 // istediğiniz fiyat
     
@@ -43,7 +43,7 @@ exports.run = async (client, message, args) => {
     return message.reply(`Ürünü Başarıyla Aldınız`)
   }
     if (args[0] === 'haydar') {
-    db.push(`haydar_${message.author.id}`,"Var")
+    db.add(`haydar_${message.author.id}`,"1")
     let para = await db.get(`para_${message.author.id}`) 
     let fiyatcık = 1600 // istediğiniz fiyat
     
