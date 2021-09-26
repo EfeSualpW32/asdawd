@@ -6,7 +6,7 @@ exports.run = async (client, message, args) => {
 let kişi = message.mentions.members.first() 
 if (!kişi) return message.reply('Kişi Belirt')
 
-  let parası = await db.fetch(`para_${kişi.id}`) 
+  let parası = await db.fetch(`para_${message.author.id}`) 
   let hesap =  await db.fetch(`hesap-${message.guild.id}`)
   
   if (kişi.bot) return message.reply('Botlar Para Alamaz?')
