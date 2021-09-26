@@ -14,7 +14,7 @@ exports.run = async (client, message, args) => {
     .setDescription(`Mesleği Yapabilmek İçin Parayla Marketten Diploma Almalısın !`)
     if(db.fetch(`kuyumcu_${message.author.id}`) == undefined) return message.channel.send(engin)
   
- var espriler = ["5000",'5200','4999','4980','5500','6000'];
+ var espriler = ["2800",'2999','3100','3300','2200','3000'];
       var espri = espriler[Math.floor(Math.random() * espriler.length)];
 
  

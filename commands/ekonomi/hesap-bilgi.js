@@ -18,7 +18,7 @@ let kuyumcu = await db.fetch(`kuyumcu_${message.author.id}`) || 'Meslek Yok'
     let isim = await db.fetch(`hesapisim_${kişi.id}`) || 'Hesap Yok'
 
  const sa = new Discord.MessageEmbed()
- .setDescription(`👤 Kullanıcı: ${kişi} \n <:tl:891668420066672650> Parası : ${parapara} \n 💳 Hesap Adı : ${isim}\n 📦 **Envanter ↓**\n Bıçak :${bıçak}\n Silah : ${silah}\n Haydar : ${haydar}\n\n 🎓 **Meslekler**↓\n →\`${taxici}\`\n→\`${Dolmuşcu}\`\n→\`${aşçı}\`\n→\`${kuyumcu}\``)
+     .setColor("#36393f").setDescription(`👤 Kullanıcı: ${kişi} \n <:tl:891668420066672650> Parası : ${parapara} \n 💳 Hesap Adı : ${isim}\n 📦 **Envanter ↓**\n Bıçak :${bıçak}\n Silah : ${silah}\n Haydar : ${haydar}\n\n 🎓 **Meslekler**↓\n →\`${taxici}\`\n→\`${Dolmuşcu}\`\n→\`${aşçı}\`\n→\`${kuyumcu}\``)
  return message.channel.send(sa)
 };
 

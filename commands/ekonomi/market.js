@@ -11,7 +11,8 @@ exports.run = async (client, message, args) => {
     var prefix = "?";
   }
   };
-  if (!args[0]) return message.reply(new Discord.MessageEmbed().setColor("#36393f").setDescription(`Mevcut Markettekiler :\n Satıb Almak İçin ${prefix}market (alınıcak meslek veya eşya)\n \n\n **bıçak :** 4061<:tl:891668420066672650> \n **silah :** 100000<:tl:891668420066672650>\n **haydar :** 1600<:tl:891668420066672650>\n\n __**MESLEK**__ ↓\n\n **Taxici :** 1000<:tl:891668420066672650> Maaş: \`300\`\n **Dolmuş :** 1500<:tl:891668420066672650> Maaş: \`600\`\n **Aşçı :** 2200<:tl:891668420066672650> Maaş: \`1400\`\n **Kuyumcu :** \`7000\`<:tl:891668420066672650> Maaş: \`5000\` \`\`\`bash\n \"Not\": Marketten Aldığınız Eşyalardan Fazla Almak Herhangi bişi ifade etmez \n\`\`\``))
+  let parapara = db.fetch(`para_${message.author.id}`)
+  if (!args[0]) return message.reply(new Discord.MessageEmbed().setColor("#36393f").setDescription(`Mevcut Markettekiler :\n Satın Almak İçin ${prefix}market (alınıcak meslek veya eşya)\n\n   **Paranız :** ${parapara}<:tl:891668420066672650>\n\n 🔪 **bıçak :** 4061<:tl:891668420066672650> \n **silah :** 100000<:tl:891668420066672650>\n **haydar :** 1600<:tl:891668420066672650>\n\n __**MESLEK**__ ↓\n\n **Taxici :** 1000<:tl:891668420066672650> Maaş: \`300\`\n **Dolmuş :** 1500<:tl:891668420066672650> Maaş: \`600\`\n **Aşçı :** 2200<:tl:891668420066672650> Maaş: \`1400\`\n **Kuyumcu :** 7000<:tl:891668420066672650> Maaş: \`3000\` \`\`\`bash\n \"Not\": Marketten Aldığınız Eşyalardan Fazla Almak Herhangi bişi ifade etmez \n\`\`\``))
   
   if (args[0] === 'silah') {
      db.push(`silah_${message.author.id}`, "Var")
