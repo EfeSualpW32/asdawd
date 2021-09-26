@@ -17,6 +17,7 @@ exports.run = async (client, message, args) => {
   let küfür = await db.fetch(`küfür_${message.guild.id}`) || '❌'
     let otocvp = await db.fetch(`otocvp_${message.guild.id}`) || '❌'
         let hgbb = await db.fetch(`hgbb_${message.guild.id}`) || '❌'
+          let sayaçs = await db.fetch(`sayaçs_${message.guild.id}`) || '❌'
   const sgmk = new Discord.MessageEmbed()
   .setTitle('EFDA BOT AYARLAR SİSTEMİ')
    .setDescription(
@@ -24,7 +25,8 @@ exports.run = async (client, message, args) => {
 CapsLock Engel (${caps})
 Küfür Engel (${küfür})
 Oto Cevap (${otocvp})
-Hg-Bb (${hgbb})`)
+Hg-Bb (${hgbb})
+Sayaç (${sayaçs})`)
   message.channel.send(sgmk);
 };
 
