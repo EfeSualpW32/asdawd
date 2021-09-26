@@ -1,20 +1,30 @@
 const Discord = require('discord.js');
 const qdb = require('quick.db');
 module.exports.run = async(client, message, args) => {
+    if(!message.guild){
+    var prefix = "?";
+  } else {
+  var prefix = qdb.fetch(`prefix_${message.guild.id}`);
+  if (!prefix) {
+    var prefix = "?";
+  }
+  };
+  var sikis = args.slice(1).join('ayarla')
+  if(!sikis) return message.channel.send(`Lütfen **${prefix}otoisim ayarlar (verilecek isim)** Yazınız`)
   
-  if (args[0] == 'aç') {
+  if(args[0] == 'ayarla') {
       var arezreiz = args.slice(1).join(' ')
         if(!arezreiz) return message.channel.send('Bir isim belirt dostum!')
     if(qdb.has(`otoisim_${message.guild.id}`)) return message.channel.send(new Discord.MessageEmbed().setColor("#36393f").setTitle(`Sistem zaten açık.`))
       qdb.set(`otoisim_${message.guild.id}`, arezreiz)
       return message.reply(`Oto İsim Ayarlandı!`)
     qdb.set(`otoisim_${message.guild.id}`, '✅')
-      message.channel.send(new Discord.MessageEmbed().setColor("#36393f").setTitle('Reklam Engel başarıyla açıldı! `Üyeleri Yasakla` yetkisine sahip olanların reklamı engellenmicektir.'))
+      message.channel.send(new Discord.MessageEmbed().setColor("#36393f").setTitle('Oto İsim başarıyla açıldı!'))
   }   
     if (args[0] == 'sıfırla') {
         if(!qdb.has(`otoisim_${message.guild.id}`)) return message.channel.send(new Discord.MessageEmbed().setColor("#36393f").setTitle(`Sistem zaten kapalı.`))
     qdb.delete(`otoisim_${message.guild.id}`)
-      message.channel.send(new Discord.MessageEmbed().setColor("#36393f").setTitle('Reklam Engel başarıyla kapatıldı! Artık herkes reklam yapabilir.'))
+      message.channel.send(new Discord.MessageEmbed().setColor("#36393f").setTitle('Oto İsim  başarıyla kapatıldı!'))
   }
 };
 
