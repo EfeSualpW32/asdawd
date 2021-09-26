@@ -49,13 +49,13 @@ return message.channel.send(embed)
     }
     //
     if(args[0] == "aç") {
+        qdb.set(`küfür_${message.guild.id}`, `✅`)
         let kontrol = db.fetch(`küfürengellog_${message.guild.id}`)
         if(!kontrol) return message.channel.send('Küfür engel log kanalı ayarlanmamış!')
         let enginar = db.fetch(`küfürengelmesaj_${message.guild.id}`)
         if(!enginar) return message.channel.send('Küfür engel mesajı ayarlanmamış')
 if(db.has(`küfürengel_${message.guild.id}`)) return message.channel.send("Zaten açık!")
 db.set(`küfürengel_${message.guild.id}`, 'aktif')
- let küfür = await db.set(`küfür_${message.guild.id}`, `✅`)
 const embed = new discord.MessageEmbed()
 .setTitle('Küfür engel sistemi açıldı!')
 .setDescription(`<@${message.author.id}> bu sunucuda küfür engel sistemini aktifleştirdi!`)
@@ -66,6 +66,7 @@ return message.channel.send('Küfür engel sistemi aktifleştirildi!')
 }
 //
 if(args[0] == "sıfırla") {
+         qdb.delete(`küfür_${message.guild.id}`)
     let engin = db.fetch(`küfürengellog_${message.guild.id}`)
     const embed = new discord.MessageEmbed()
     .setTitle('Küfür engel sistemi kapatıldı!')

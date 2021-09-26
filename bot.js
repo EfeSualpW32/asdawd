@@ -234,10 +234,11 @@ client.on("message", async msg => {
     return;
   };
   const Database = require("plasma-db");
-  const db = new Database("./database.json");
+  const db = new Database("./database.json");  
   let engin = db.fetch(`küfürengellog_${msg.guild.id}`);
   let enginn = db.fetch(`küfürengelmesaj_${msg.guild.id}`);
   let enginar = db.fetch(`küfürengel_${msg.guild.id}`);
+
   if (enginar === "aktif") {
     const kufurler = [
       "oç",
