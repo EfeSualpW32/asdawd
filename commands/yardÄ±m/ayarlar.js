@@ -15,11 +15,16 @@ exports.run = async (client, message, args) => {
   let reklam = await db.fetch(`reklam_${message.guild.id}`) || '❌'
   let caps = await db.fetch(`caps_${message.guild.id}`) || '❌'
   let küfür = await db.fetch(`küfür_${message.guild.id}`) || '❌'
+    let otocvp = await db.fetch(`otocvp_${message.guild.id}`) || '❌'
+        let hgbb = await db.fetch(`hgbb_${message.guild.id}`) || '❌'
   const sgmk = new Discord.MessageEmbed()
+  .setTitle('EFDA BOT AYARLAR SİSTEMİ')
    .setDescription(
 `Reklam Engel (${reklam})
 CapsLock Engel (${caps})
-Küfür Engel (${küfür})`)
+Küfür Engel (${küfür})
+Oto Cevap (${otocvp})
+Hg-Bb (${hgbb})`)
   message.channel.send(sgmk);
 };
 
