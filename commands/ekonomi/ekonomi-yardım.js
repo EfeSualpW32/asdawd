@@ -21,6 +21,7 @@ exports.run = async(client, message) => {
     .addField(':small_red_triangle_down:',`\`${prefix}para-gönder : Belirttiğiniz Kişiye Belirttiğiniz Miktarda Para Gönderir\``)
     .addField(':small_red_triangle_down:',`\`${prefix}para : Bankadaki Paranızı Belirtir\``)
     .addField(':small_red_triangle_down:',`\`${prefix}market : Markteti Gösterir\``)
+       .addField(':small_red_triangle_down:',`\`${prefix}slots : Slots Oynarsınız\``)
     .addField(':small_red_triangle_down:',`**MESLEK**`,"`(market menüsünden alınır)`")
     .addField(':small_red_triangle_down:',`\`${prefix}Taxici : Taxici Olup Para Kazanırsınız Seviye(1)\``)
     .addField(':small_red_triangle_down:',`\`${prefix}Dolmuşcu : dolmuşcu Olup Para Kazanırsınız Seviye(2)\``)
