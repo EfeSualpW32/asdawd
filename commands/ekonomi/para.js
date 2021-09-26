@@ -8,7 +8,7 @@ let kişi = message.mentions.users.first() || message.author
 
 let parapara = await db.fetch(`para_${kişi.id}`) || 0  
   
-  message.channel.send(`\`\`\`\n${parapara}\n\`\`\`\nTl'niz Var`)
+  message.channel.send(`<@!${kişi.id}>\n\`\`\`\n Kişisinin ₺${parapara} Parası Var\n\`\`\`\n`)
 };
 exports.conf = {
   aliases: [],
