@@ -17,7 +17,7 @@ exports.run = async (bot, message, args) => {
  
   if (args[0] == 'aç') {
     if(db.has(`reklam_${message.guild.id}`)) return message.channel.send(new Discord.MessageEmbed().setColor("#36393f").setTitle(`Sistem zaten açık.`))
-    db.push(`reklam_${message.guild.id}`, 'Açık')
+    db.set(`reklam_${message.guild.id}`, '✅')
       message.channel.send(new Discord.MessageEmbed().setColor("#36393f").setTitle('Reklam Engel başarıyla açıldı! `Üyeleri Yasakla` yetkisine sahip olanların reklamı engellenmicektir.'))
   }
   if (args[0] == 'kapat') {

@@ -17,7 +17,7 @@ exports.run = async (client, message, args) => {
 
   if(args[0] === 'aç') {
     db.set(`capslock_${message.guild.id}`, true)
-    db.get(`caps_${message.guild.id}`,'Açık')
+    db.set(`caps_${message.guild.id}`,'✅')
     message.channel.send(new Discord.MessageEmbed().setDescription("CapsLock Engel Sistemi Başarıyla Aktfileştirildi <a:evet:814802902954016768>\n İyi Sohbetler Dileriz.").setColor(renk))
   return
      if(db.has(`capslock_${message.guild.id}`)) return message.channel.send(new Discord.MessageEmbed().setColor("#36393f").setTitle(`Sistem zaten açık.`))

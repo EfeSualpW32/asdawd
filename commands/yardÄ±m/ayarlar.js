@@ -12,12 +12,14 @@ exports.run = async (client, message, args) => {
     var prefix = "?";
   }
   };
-  let reklam = await db.fetch(`reklam_${message.guild.id}`) || 'Kapalı'
-  let caps = await db.fetch(`caps_${message.guild.id}`) || 'Kapalı'
+  let reklam = await db.fetch(`reklam_${message.guild.id}`) || '❌'
+  let caps = await db.fetch(`caps_${message.guild.id}`) || '❌'
+  let küfür = await db.fetch(`küfür_${message.guild.id}`) || '❌'
   const sgmk = new Discord.MessageEmbed()
    .setDescription(
 `Reklam Engel (${reklam})
-CapsLock Engel (${caps})`)
+CapsLock Engel (${caps})
+Küfür Engel (${küfür})`)
   message.channel.send(sgmk);
 };
 
