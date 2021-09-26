@@ -22,7 +22,7 @@ exports.run = async (client, message, args) => {
     {
 
       db.add(`para_${message.author.id}`, espri)
-message.channel.send(`Silahla Vurulan Kişiden ${espri} Tl Para Çıktı`);
+message.channel.send(`Silahla Vurulan Kişiden <:tl:891668420066672650>${espri} Para Çıktı`);
 }
        db.set(`günlükbea_${message.guild.id}`, Date.now());
 

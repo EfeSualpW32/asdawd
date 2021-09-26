@@ -24,7 +24,7 @@ if (!paragönderme) return message.reply('Miktar Belirt')
   
   db.add(`para_${kişi.id}`, paragönderme)
   db.add(`para_${message.author.id}`, -paragönderme)
-  return message.reply(`${kişi} Adlı Kullanıcıya ${paragönderme} Kadar Para Gönderildi Ve Parandan ${paragönderme} Kadar Düştü!`)
+  return message.reply(new Discord.MessageEmbed().setColor("#36393f").setTitle('PARA HAVALE').setDescription(`${kişi} Adlı Kullanıcıya <:tl:891668420066672650>**${paragönderme}** Kadar Para Gönderildi Ve Parandan <:tl:891668420066672650>**${paragönderme}** Kadar Düştü!`))
   
 };
 exports.conf = {

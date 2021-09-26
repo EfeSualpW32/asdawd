@@ -24,7 +24,7 @@ exports.run = async (client, message, args) => {
     {
 
       db.add(`para_${message.author.id}`, espri)
-message.channel.send(`Dolmuşcu Mesleğinden ${espri} Tl Para Çıktı`);
+message.channel.send(`Dolmuşcu Mesleğinden <:tl:891668420066672650>${espri} Para Çıktı`);
 }
        db.set(`günlükbea_${message.guild.id}`, Date.now());
 
