@@ -22,6 +22,7 @@ let logs = await db.fetch(`logs_${message.guild.id}`) || '❌'
 let otoah = await db.fetch(`otorols_${message.guild.id}`) || '❌'
   const sgmk = new Discord.MessageEmbed()
   .setTitle('EFDA BOT AYARLAR SİSTEMİ')
+  .setColor(`#36393f`)
    .setDescription(
 `Reklam Engel (${reklam})
 CapsLock Engel (${caps})

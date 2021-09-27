@@ -994,7 +994,7 @@ client.on("guildMemberAdd", member => {
 var ales = qdb.fetch(`otorolkanali_${member.guild.id}`);
 var kanal = member.guild.channels.cache.get(ales)
 if(!kanal) return;
-kanal.send(`<@${member.id}> kişisi sunucuya katıldı, ${rol} rolü verildi. Hoşgeldin ${member.user.username}!`)
+kanal.send(new Discord.MessageEmbed().setColor('#36393f').setDescription(`<@${member.id}> kişisi sunucuya katıldı, ${rol} rolü verildi. Hoşgeldin ${member.user.username}!`))
 });
 
 
