@@ -1,9 +1,8 @@
 const Discord = require("discord.js");
 const db = require("quick.db");
-const canvas = require('canvas');
-
 var ayarlar = require("../../config");
 const Canvas = require('canvas')
+    , Image = Canvas.Image
     , Font = Canvas.Font
     , path = require('path');
 const request = require('node-superfetch');
@@ -13,11 +12,13 @@ exports.run = async (client, message, args) => {
   
 let parapara = await db.fetch(`para_${kişi.id}`) || 0 
 
-const { createCanvas, loadImage } = require('canvas');
-            const canvas = Canvas.createCanvas(1092, 678);
+  const { createCanvas, loadImage } = require("canvas");
+            const canvas = createCanvas(1092, 678);
             const ctx = canvas.getContext("2d");
-var background = await loadImage("https://cdn.glitch.com/0bb90534-d183-4b5d-a865-453271102d9c%2Foooo.jpg?v=1632751129795");
-     
+
+            const background = await Canvas.loadImage(
+              "https://cdn.glitch.com/0bb90534-d183-4b5d-a865-453271102d9c%2Foooo.png?v=1632749446473"
+            );  
             ctx.drawImage(background , 0 ,0 , canvas.width , canvas.height);
             
             const avatar = await Canvas.loadImage(message.author.displayAvatarURL())

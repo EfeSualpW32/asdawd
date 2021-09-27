@@ -44,7 +44,7 @@
     "os": "^0.1.1",
     "cpu-stat": "^2.0.1",
     "moment-duration-format": "^2.3.2",
-    "node-superfetch": "^0.1.11",
+    "node-superfetch": "^0.2.3",
     "superagent": "^6.1.0",
     "user-instagram": "^2.1.8",
     "random-puppy": "^1.1.0",
