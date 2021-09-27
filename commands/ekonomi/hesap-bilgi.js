@@ -16,6 +16,7 @@ let taxici = await db.fetch(`taxici_${message.author.id}`) || 'Meslek Yok'
 let Dolmuşcu = await db.fetch(`dolmuşcu_${message.author.id}`) || 'Meslek Yok'
 let aşçı = await db.fetch(`aşçı_${message.author.id}`) || 'Meslek Yok'
 let kuyumcu = await db.fetch(`kuyumcu_${message.author.id}`) || 'Meslek Yok'
+let sunuss = message.guild.name
 
   let parapara = await db.fetch(`para_${kişi.id}`) || 0
     let isim = await db.fetch(`hesapisim_${kişi.id}`) || 'Hesap Yok'
@@ -32,10 +33,13 @@ var background = await loadImage("https://cdn.glitch.com/0bb90534-d183-4b5d-a865
             ctx.fillText(`\nBıçak:${bıçak}\nSilah:${silah}\nHaydar:${haydar}` , canvas.width / 35, 630 )
   ctx.font = '60px sans-serif';
             ctx.fillStyle = "BLACK";
-            ctx.fillText(`${isim}` , canvas.width / 5.30, 250 )
+            ctx.fillText(`${isim}` , canvas.width / 5.80, 250 )
    ctx.font = '60px sans-serif';
             ctx.fillStyle = "BLACK";
-            ctx.fillText(`${message.author.id}` , canvas.width / 5.30, 340 )
+            ctx.fillText(`${sunuss}` , canvas.width / 5.80, 140 )
+   ctx.font = '60px sans-serif';
+            ctx.fillStyle = "BLACK";
+            ctx.fillText(`${message.author.id}` , canvas.width / 5.80, 340 )
     ctx.font = '60px sans-serif';
             ctx.fillStyle = "BLACK";
             ctx.fillText(`\n${taxici}\n${Dolmuşcu}\n${aşçı}\n${kuyumcu}` , canvas.width / 1.43, 600 )
