@@ -13,11 +13,11 @@ exports.run = async (client, message, args) => {
 let parapara = await db.fetch(`para_${kişi.id}`) || 0 
 
             const { createCanvas, loadImage } = require('canvas');
-            
+            var image = await loadImage("krekart.png");
             const canvas = createCanvas(1092, 678);
             const ctx = canvas.getContext("2d");
 
-            const background = await Canvas.loadImage('https://cdn.glitch.com/0bb90534-d183-4b5d-a865-453271102d9c%2Fwoxecredit.png?v=1632743568846');
+            const background = await Canvas.loadImage('/app/assets/krekart.png');
             ctx.drawImage(background , 0 ,0 , canvas.width , canvas.height);
             
             const avatar = await Canvas.loadImage(message.author.displayAvatarURL())
