@@ -20,6 +20,7 @@ let hgbb = await db.fetch(`hgbb_${message.guild.id}`) || '<:off:8919272428867461
 let sayaçs = await db.fetch(`sayaçs_${message.guild.id}`) || '<:off:891927242886746133>'
 let logs = await db.fetch(`logs_${message.guild.id}`) || '<:off:891927242886746133>'
 let otoah = await db.fetch(`otorols_${message.guild.id}`) || '<:off:891927242886746133>'
+let ototahg = await db.fetch(`ototags_${message.guild.id}`) || '<:off:891927242886746133>'
   const sgmk = new Discord.MessageEmbed()
   .setTitle('EFDA BOT AYARLAR SİSTEMİ')
   .setColor(`#36393f`)
@@ -31,7 +32,8 @@ let otoah = await db.fetch(`otorols_${message.guild.id}`) || '<:off:891927242886
 **Hg-Bb** (${hgbb})
 **Sayaç** (${sayaçs})
 **Mod Log** (${logs})
-**Otorol** (${otoah})`)
+**Otorol** (${otoah})
+**Oto Tag** (${ototahg})`)
   message.channel.send(sgmk);
 };
 

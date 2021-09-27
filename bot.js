@@ -996,7 +996,12 @@ var kanal = member.guild.channels.cache.get(ales)
 if(!kanal) return;
 kanal.send(new Discord.MessageEmbed().setColor('#36393f').setDescription(`<@${member.id}> kişisi sunucuya katıldı, ${rol} rolü verildi. Hoşgeldin ${member.user.username}!`))
 });
-
+//OTO TAG -----------------------
+client.on("guildMemberAdd", member => {
+  var tag = require('quick.db').fetch(`ototag_${member.guild.id}`)
+  if(!tag) return;
+  member.setNickname(`${tag}${member.user.username}`)
+  })
 
 //SAYAÇ MESAJ  
 client.on("guildMemberAdd", member => {
