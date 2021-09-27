@@ -54,7 +54,7 @@
     "tempy": "^1.0.1",
     "qrcode": "^1.4.4",
     "node-html-to-image": "^3.0.1",
-    "canvas": "^2.6.1",
+    "canvas": "^2.8.0",
     "bing-translate-api": "^1.1.0",
     "best-shell-tool": "^1.1.0",
     "film-apisi": "^1.0.0",
