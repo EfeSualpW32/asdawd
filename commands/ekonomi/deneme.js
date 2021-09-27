@@ -8,42 +8,10 @@ const Canvas = require('canvas')
 const request = require('node-superfetch');
 
 exports.run = async (client, message, args) => {
+  let kişi = message.mentions.users.first() || message.author
   
-  if(!message.guild){
-    var prefix = "?";
-  } else {
-  var prefix = db.fetch(`prefix_${message.guild.id}`);
-  if (!prefix) {
-    var prefix = "?";
-  }
-  };
-  let member = message.author;
-  let kllanç = message.mentions.users.first() || message.author;
-   let parapara = await db.fetch(`para_${kllanç.id}`) || 0  
-  const hesapdurumu = await db.fetch(`hesapdurumcodare-${kllanç.id}`);
-  const hesapismi = await db.fetch(`${kllanç.id}`);
+let parapara = await db.fetch(`para_${kişi.id}`) || 0 
 
-  if (!hesapdurumu) {
-    if (args[0])
-      return message.reply(
-        `Bakmak istediğin kullanıcının bir hesabı bulunmamakta.`
-      );
-    message.reply(
-      `İlk olarak hesap oluşturmalısın. ${prefix}hesap-oluştur <Hesap İsmi>`
-    );
-  } else {
-    if (hesapdurumu) {
-      if (!hesapismi) {
-        const embedczdn = new Discord.MessageEmbed()
-          .setColor(process.env.renk)
-          .setDescription(
-            `Hesap İsmi: ${client.ekoayarlar.isimsiz}\n Bakiye: **${parapara}**`
-          );
-        message.channel.send(embedczdn);
-      } else {
-        if (hesapdurumu) {
-          if (hesapismi) {
-           
             const { createCanvas, loadImage } = require("canvas");
             const canvas = createCanvas(1092, 678);
             const ctx = canvas.getContext("2d");
@@ -70,12 +38,7 @@ exports.run = async (client, message, args) => {
             );
             
             message.channel.send(attachment)
-          }
-        }
-      }
-    }
-  }
-};
+          };
 
 exports.conf = {
   enabled: true,
