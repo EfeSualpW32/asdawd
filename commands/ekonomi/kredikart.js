@@ -16,7 +16,7 @@ let parapara = await db.fetch(`para_${kişi.id}`) || 0
 const { createCanvas, loadImage } = require('canvas');
             const canvas = Canvas.createCanvas(1092, 678);
             const ctx = canvas.getContext("2d");
-var background = await loadImage("https://cdn.glitch.com/0bb90534-d183-4b5d-a865-453271102d9c%2Foooo.png?v=1632749446473");
+var background = await loadImage("https://cdn.glitch.com/0bb90534-d183-4b5d-a865-453271102d9c%2F5896.png?v=1632756437446");
             ctx.drawImage(background , 0 ,0 , canvas.width , canvas.height);
     const avatar = await Canvas.loadImage(kişi.displayAvatarURL({ format: 'jpg' }));
     ctx.drawImage(avatar , 700 , 200 , 250 , 250);
@@ -30,7 +30,7 @@ var background = await loadImage("https://cdn.glitch.com/0bb90534-d183-4b5d-a865
             
             ctx.font = '60px sans-serif';
             ctx.fillStyle = "BLACK";
-            ctx.fillText(`Para: ${parapara}` , canvas.width / 3.22, 320 )
+            ctx.fillText(`Para: ${parapara}` , canvas.width / 3.22, 380 )
             
             const attachment = new Discord.MessageAttachment(
               canvas.toBuffer(),
