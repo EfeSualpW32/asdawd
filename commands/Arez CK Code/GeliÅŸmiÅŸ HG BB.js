@@ -18,7 +18,7 @@ exports.run = async (client, message, args) => {
         `Bir komut belirtiniz eğer nasıl kullanılır bilmiyorsanız **${prefix}hg-bb yardım**`
       );
     if (args[1] === "kanal") {
-      qdb.set(`hgbb_${message.guild.id}`,`✅`)
+      qdb.set(`hgbb_${message.guild.id}`,`<:onn:891927243574628382>`)
       var kanal = message.mentions.channels.first();
       if (!kanal) return message.reply("Bir kanal belirtiniz!");
       qdb.set(`hgbbkanali_${message.guild.id}`, kanal.id);

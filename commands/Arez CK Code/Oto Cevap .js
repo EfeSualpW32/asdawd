@@ -6,7 +6,7 @@ if(!args[0]) return message.channel.send(new Discord.MessageEmbed().setColor('BL
 if(args[0] === "aç"){
   if(db.has(`otocevap_${message.guild.id}`)) return message.channel.send(new Discord.MessageEmbed().setColor('BLACK').setDescription("Oto Cevap Zaten Açık!"))
   db.set(`otocevap_${message.guild.id}`, "aktif");
-    db.set(`otocvp_${message.guild.id}`, `✅`);
+    db.set(`otocvp_${message.guild.id}`, `<:onn:891927243574628382>`);
   return message.channel.send(new Discord.MessageEmbed().setColor('BLACK').setDescription("Oto Cevap açıldı!"))
 };
 if(args[0] === "kapat"){//Main'e gel

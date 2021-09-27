@@ -11,7 +11,7 @@ exports.run = async(client, message, args) => {
       if(sayı < message.guild.memberCount) return message.reply(new Discord.MessageEmbed().setTitle('Uyarı !').setColor(renk).setDescription("Ayarlamaya Çalıştığınız Sayaç Sayısını Zaten Sunucu Başarmıştır ❌\n\n`Lütfen Birdaha Deneyiniz`"))
       qdb.set(`sayackanali_${message.guild.id}`, kanal.id)
       qdb.set(`sayachedef_${message.guild.id}`, sayı)
-      qdb.set(`sayaçs_${message.guild.id}`,`✅`)
+      qdb.set(`sayaçs_${message.guild.id}`,`<:onn:891927243574628382>`)
       return message.reply(new Discord.MessageEmbed().setTitle('Başarılı !').setColor(renk).setDescription("Başarıyla Sunucu Sayacı Ayarlanmıştır ✅"))
     }
     if(args[0] === "sıfırla"){

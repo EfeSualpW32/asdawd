@@ -49,7 +49,7 @@ return message.channel.send(embed)
     }
     //
     if(args[0] == "aç") {
-        qdb.set(`küfür_${message.guild.id}`, `✅`)
+        qdb.set(`küfür_${message.guild.id}`, `<:onn:891927243574628382>`)
         let kontrol = db.fetch(`küfürengellog_${message.guild.id}`)
         if(!kontrol) return message.channel.send('Küfür engel log kanalı ayarlanmamış!')
         let enginar = db.fetch(`küfürengelmesaj_${message.guild.id}`)

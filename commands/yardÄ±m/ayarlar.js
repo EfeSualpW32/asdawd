@@ -12,26 +12,26 @@ exports.run = async (client, message, args) => {
     var prefix = "?";
   }
   };
-let reklam = await db.fetch(`reklam88_${message.guild.id}`) || '❌'
-let caps = await db.fetch(`caps_${message.guild.id}`) || '❌'
-let küfür = await db.fetch(`küfür_${message.guild.id}`) || '❌'
-let otocvp = await db.fetch(`otocvp_${message.guild.id}`) || '❌'
-let hgbb = await db.fetch(`hgbb_${message.guild.id}`) || '❌'
-let sayaçs = await db.fetch(`sayaçs_${message.guild.id}`) || '❌'
-let logs = await db.fetch(`logs_${message.guild.id}`) || '❌'
-let otoah = await db.fetch(`otorols_${message.guild.id}`) || '❌'
+let reklam = await db.fetch(`reklam88_${message.guild.id}`) || '<:off:891927242886746133>'
+let caps = await db.fetch(`caps_${message.guild.id}`) || '<:off:891927242886746133>'
+let küfür = await db.fetch(`küfür_${message.guild.id}`) || '<:off:891927242886746133>'
+let otocvp = await db.fetch(`otocvp_${message.guild.id}`) || '<:off:891927242886746133>'
+let hgbb = await db.fetch(`hgbb_${message.guild.id}`) || '<:off:891927242886746133>'
+let sayaçs = await db.fetch(`sayaçs_${message.guild.id}`) || '<:off:891927242886746133>'
+let logs = await db.fetch(`logs_${message.guild.id}`) || '<:off:891927242886746133>'
+let otoah = await db.fetch(`otorols_${message.guild.id}`) || '<:off:891927242886746133>'
   const sgmk = new Discord.MessageEmbed()
   .setTitle('EFDA BOT AYARLAR SİSTEMİ')
   .setColor(`#36393f`)
    .setDescription(
-`Reklam Engel (${reklam})
-CapsLock Engel (${caps})
-Küfür Engel (${küfür})
-Oto Cevap (${otocvp})
-Hg-Bb (${hgbb})
-Sayaç (${sayaçs})
-Mod Log (${logs})
-Otorol (${otoah})`)
+`**Reklam Engel** (${reklam})
+**CapsLock Engel** (${caps})
+**Küfür Engel** (${küfür})
+**Oto Cevap** (${otocvp})
+**Hg-Bb** (${hgbb})
+**Sayaç** (${sayaçs})
+**Mod Log** (${logs})
+**Otorol** (${otoah})`)
   message.channel.send(sgmk);
 };
 

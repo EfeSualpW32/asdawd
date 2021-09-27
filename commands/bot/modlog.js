@@ -23,7 +23,7 @@ if (!logk) return message.channel.send(new Discord.MessageEmbed().setDescription
 db.set(`codeminglog_${message.guild.id}`, logk.id)
 
 message.channel.send(new Discord.MessageEmbed().setDescription(`Mod-Log kanalı başarıyla __${logk}__ olarak ayarlandı\nSıfırlamak İçin modlog \`sıfırla\``).setColor("#36393f"));
-db.set(`logs_${message.guild.id}`,'✅')
+db.set(`logs_${message.guild.id}`,'<:onn:891927243574628382>')
 console.log(`Mod-log komutu ${message.author.username} Tarafından kullanıldı`)
 };
 

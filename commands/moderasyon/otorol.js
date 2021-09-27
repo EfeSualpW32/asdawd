@@ -18,7 +18,7 @@ exports.run = async(client, message, args) => {
     roldb.set(`otorolkanali_${message.guild.id}`, ales.id)
     return message.reply(new alescnm.MessageEmbed().setColor(renks).setDescription('Otorol kanalı başarı ile ayarlandı.'))}
     if(args[1] == "rol" || args[1] == "role") {
-      roldb.set(`otorols_${message.guild.id}`,`✅`)
+      roldb.set(`otorols_${message.guild.id}`,`<:onn:891927243574628382>`)
         var ronney = message.mentions.roles.first() || message.guild.roles.cache.get(args[2]);
         if(!ronney) return message.reply("Lütfen bir rol belirtiniz")
         roldb.set(`otorolrolu_${message.guild.id}`, ronney.id)
