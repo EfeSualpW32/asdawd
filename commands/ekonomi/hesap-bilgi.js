@@ -25,17 +25,17 @@ const { createCanvas, loadImage } = require('canvas');
 var background = await loadImage("https://cdn.glitch.com/0bb90534-d183-4b5d-a865-453271102d9c%2F516.png?v=1632758143134");
             ctx.drawImage(background , 0 ,0 , canvas.width , canvas.height);
     const avatar = await Canvas.loadImage(kişi.displayAvatarURL({ format: 'jpg' }));
-    ctx.drawImage(avatar , 700 , 200 , 250 , 250);
+    ctx.drawImage(avatar , 4 , 250 , 320 , 320);
             
             ctx.font = '60px sans-serif';
             ctx.fillStyle = "BLACK";
-            ctx.fillText(`Envanter ↓ ${bıçak}\n${silah},${haydar}` , canvas.width / 5, 550 )
+            ctx.fillText(`Envanter ↓ \nBıçak:${bıçak}\nSilah:${silah}\nHaydar:${haydar}` , canvas.width / 3, 100 )
   ctx.font = '60px sans-serif';
             ctx.fillStyle = "BLACK";
-            ctx.fillText(`${isim}` , canvas.width / 5, 500 )
+            ctx.fillText(`${isim}` , canvas.width / 5, 300 )
     ctx.font = '60px sans-serif';
             ctx.fillStyle = "BLACK";
-            ctx.fillText(`Meslekler ↓\n${taxici}\n${Dolmuşcu}\n${aşçı}\n${kuyumcu}` , canvas.width / 5, 200 )
+            ctx.fillText(`Meslekler ↓\n${taxici}\n${Dolmuşcu}\n${aşçı}\n${kuyumcu}` , canvas.width / 2, 700 )
             
             ctx.font = '60px sans-serif';
             ctx.fillStyle = "BLACK";
