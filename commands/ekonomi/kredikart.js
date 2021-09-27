@@ -10,7 +10,7 @@ const request = require('node-superfetch');
 
 exports.run = async (client, message, args) => {
   let kişi = message.mentions.users.first() || message.author
-  
+   let isim = await db.fetch(`hesapisim_${kişi.id}`) || 'Hesap Yok'
 let parapara = await db.fetch(`para_${kişi.id}`) || 0 
 
 const { createCanvas, loadImage } = require('canvas');
@@ -26,7 +26,7 @@ var background = await loadImage("https://cdn.glitch.com/0bb90534-d183-4b5d-a865
             ctx.fillText(`${message.author.id}` , canvas.width / 5, 550 )
   ctx.font = '60px sans-serif';
             ctx.fillStyle = "BLACK";
-            ctx.fillText(`${kişi}` , canvas.width / 5, 550 )
+            ctx.fillText(`${isim}` , canvas.width / 390, 340 )
             
             ctx.font = '60px sans-serif';
             ctx.fillStyle = "BLACK";
