@@ -13,6 +13,7 @@ exports.run = async(client, message) => {
     const y = new Discord.MessageEmbed()
     .setAuthor('EFDA BASİT EKONOMİ')
 .setColor("#36393f")
+    .addField(':small_red_triangle_down:',`\`${prefix}banka : Para Mikratınızı Ve İd Nizi Gösterir\``)
     .addField(':small_red_triangle_down:',`\`${prefix}günlük-para : Günlük Para (24 Saatte Bir Kullanılabilir)\``)
         .addField(':small_red_triangle_down:',`\`${prefix}dilen : Medine Dilencisi Olursunuz\``)
     .addField(':small_red_triangle_down:',`\`${prefix}hesap-aç : Banka Hesap Açar (+20 Lira Verir)\``)

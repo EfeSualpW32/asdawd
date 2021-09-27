@@ -23,7 +23,7 @@ var guild = message.channel.guild
 const { createCanvas, loadImage } = require('canvas');
             const canvas = Canvas.createCanvas(1280, 920);
             const ctx = canvas.getContext("2d");
-var background = await loadImage("https://cdn.glitch.com/0bb90534-d183-4b5d-a865-453271102d9c%2FASDASD-min%20(1).png?v=1632768297089");
+var background = await loadImage("https://cdn.glitch.com/0bb90534-d183-4b5d-a865-453271102d9c%2FASDASD.png?v=1632765725756");
             ctx.drawImage(background , 0 ,0 , canvas.width , canvas.height);
     const avatar = await Canvas.loadImage(kişi.displayAvatarURL({ format: 'jpg' }));
     ctx.drawImage(avatar , 930 , 45 , 320 , 320);
