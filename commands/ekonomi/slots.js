@@ -6,7 +6,9 @@ exports.run = function(client, message, args) {
 
     var slot1 = slots[Math.floor(Math.random() * slots.length)];
 
-
+ let parapara = db.fetch(`para_`)
+  
+  
   let paragönderme = db.fetch(`para_${message.author.id}`)
   
     if (slot1) {
@@ -21,7 +23,7 @@ exports.run = function(client, message, args) {
 
         Kaybettin
         `);
-        db.add(`para_${message.author.id}`, slots, -paragönderme)
+        db.add(`para_${message.author.id}`, slots, -parapara)
   }
 };
 

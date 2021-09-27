@@ -8,14 +8,14 @@ const Canvas = require('canvas')
 const request = require('node-superfetch');
 
 exports.run = async (client, message, args) => {
-var kişi = message.mentions.users.first() || message.author
-var bıçak =  db.fetch(`bıçak_${message.author.id}`) || 'yok'
-var silah =  db.fetch(`silah_${message.author.id}`) || 'yok'
-var haydar =  db.fetch(`haydar_${message.author.id}`) || 'yok'
-var taxici =  db.fetch(`taxici_${message.author.id}`) || 'Meslek Yok'
-var Dolmuşcu =  db.fetch(`dolmuşcu_${message.author.id}`) || 'Meslek Yok'
-var aşçı =  db.fetch(`aşçı_${message.author.id}`) || 'Meslek Yok'
-var kuyumcu =  db.fetch(`kuyumcu_${message.author.id}`) || 'Meslek Yok'
+var kişi = message.mentions.users.first()|| message.author
+var bıçak =  db.fetch(`bıçak_${kişi.id}`) || 'yok'
+var silah =  db.fetch(`silah_${kişi.id}`) || 'yok'
+var haydar =  db.fetch(`haydar_${kişi.id}`) || 'yok'
+var taxici =  db.fetch(`taxici_${kişi.id}`) || 'Meslek Yok'
+var Dolmuşcu =  db.fetch(`dolmuşcu_${kişi.id}`) || 'Meslek Yok'
+var aşçı =  db.fetch(`aşçı_${kişi.id}`) || 'Meslek Yok'
+var kuyumcu =  db.fetch(`kuyumcu_${kişi.id}`) || 'Meslek Yok'
 var guild = message.channel.guild
 
   var parapara =  db.fetch(`para_${kişi.id}`) || 0
@@ -23,7 +23,7 @@ var guild = message.channel.guild
 const { createCanvas, loadImage } = require('canvas');
             const canvas = Canvas.createCanvas(1280, 920);
             const ctx = canvas.getContext("2d");
-var background = await loadImage("https://cdn.glitch.com/0bb90534-d183-4b5d-a865-453271102d9c%2FASDASD.png?v=1632765725756");
+var background = await loadImage("https://cdn.glitch.com/0bb90534-d183-4b5d-a865-453271102d9c%2FASDASD-min%20(1).png?v=1632768297089");
             ctx.drawImage(background , 0 ,0 , canvas.width , canvas.height);
     const avatar = await Canvas.loadImage(kişi.displayAvatarURL({ format: 'jpg' }));
     ctx.drawImage(avatar , 930 , 45 , 320 , 320);
@@ -39,7 +39,7 @@ var background = await loadImage("https://cdn.glitch.com/0bb90534-d183-4b5d-a865
             ctx.fillText(`${guild.name}` , canvas.width / 3.20, 531 )
    ctx.font = '60px sans-serif';
             ctx.fillStyle = "#0aecfc";
-            ctx.fillText(`${message.author.id}` , canvas.width / 5.80, 340 )
+            ctx.fillText(`${kişi.id}` , canvas.width / 5.80, 340 )
     ctx.font = '60px sans-serif';
             ctx.fillStyle = "#0aecfc";
             ctx.fillText(`\n${taxici}\n${Dolmuşcu}\n${aşçı}\n${kuyumcu}` , canvas.width / 1.43, 600 )
