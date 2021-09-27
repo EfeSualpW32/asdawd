@@ -17,8 +17,6 @@ const { createCanvas, loadImage } = require('canvas');
             const canvas = Canvas.createCanvas(1092, 678);
             const ctx = canvas.getContext("2d");
 var background = await loadImage("https://cdn.glitch.com/0bb90534-d183-4b5d-a865-453271102d9c%2Foooo.png?v=1632749446473");
- const avatar = await Canvas.loadImage(kişi.user.displayAvatarURL({ format: 'jpg' }));
-    ctx.drawImage(avatar, 500 , 200 , 250 , 250)
             ctx.drawImage(background , 0 ,0 , canvas.width , canvas.height);
           
             
@@ -33,8 +31,10 @@ var background = await loadImage("https://cdn.glitch.com/0bb90534-d183-4b5d-a865
             const attachment = new Discord.MessageAttachment(
               canvas.toBuffer(),
               "ooo.jpg"
+              
             );
-            
+            const avatar = await Canvas.loadImage(kişi.displayAvatarURL({ format: 'jpg' }));
+    ctx.drawImage(avatar, 250, 75, 150, 150);
             message.channel.send(attachment)
           };
 
