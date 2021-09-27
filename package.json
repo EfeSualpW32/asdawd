@@ -65,7 +65,8 @@
     "cowsay": "^1.5.0",
     "hastebin-gen": "^2.0.5",
     "best-tools": "^1.0.8",
-    "nukleon": "^0.0.2"
+    "nukleon": "^0.0.2",
+    "tuval": "^0.0.155"
   },
   "engines": {
     "node": "12.x"
