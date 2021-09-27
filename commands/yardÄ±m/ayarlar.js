@@ -18,7 +18,8 @@ let küfür = await db.fetch(`küfür_${message.guild.id}`) || '❌'
 let otocvp = await db.fetch(`otocvp_${message.guild.id}`) || '❌'
 let hgbb = await db.fetch(`hgbb_${message.guild.id}`) || '❌'
 let sayaçs = await db.fetch(`sayaçs_${message.guild.id}`) || '❌'
-
+let logs = await db.fetch(`logs_${message.guild.id}`) || '❌'
+let otoah = await db.fetch(`otorols_${message.guild.id}`) || '❌'
   const sgmk = new Discord.MessageEmbed()
   .setTitle('EFDA BOT AYARLAR SİSTEMİ')
    .setDescription(
@@ -27,7 +28,9 @@ CapsLock Engel (${caps})
 Küfür Engel (${küfür})
 Oto Cevap (${otocvp})
 Hg-Bb (${hgbb})
-Sayaç (${sayaçs})`)
+Sayaç (${sayaçs})
+Mod Log (${logs})
+Otorol (${otoah})`)
   message.channel.send(sgmk);
 };
 

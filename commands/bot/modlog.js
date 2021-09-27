@@ -8,6 +8,7 @@ let logk = message.mentions.channels.first();
 let logkanal = await db.fetch(`codeminglog_${message.guild.id}`)
   
   if (args[0] === "sıfırla" || args[0] === "kapat") {
+    db.delete(`logs_${message.guild.id}`)
     if(!logkanal) return message.channel.send(new Discord.MessageEmbed().setDescription(`Modlog Kanalı Zaten ayarlı değil`).setColor("#36393f"));
     
     db.delete(`codeminglog_${message.guild.id}`)
@@ -21,8 +22,8 @@ if (!logk) return message.channel.send(new Discord.MessageEmbed().setDescription
 
 db.set(`codeminglog_${message.guild.id}`, logk.id)
 
-message.channel.send(new Discord.MessageEmbed().setDescription(`Mod-Log kanalı başarıyla __${logk}__ olarak ayarlandı`).setColor("#36393f"));
-
+message.channel.send(new Discord.MessageEmbed().setDescription(`Mod-Log kanalı başarıyla __${logk}__ olarak ayarlandı\nSıfırlamak İçin modlog \`sıfırla\``).setColor("#36393f"));
+db.set(`logs_${message.guild.id}`,'✅')
 console.log(`Mod-log komutu ${message.author.username} Tarafından kullanıldı`)
 };
 

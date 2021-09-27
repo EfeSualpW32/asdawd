@@ -984,6 +984,18 @@ client.on("message", async msg => {
 });
 /* /app/assets/giris.png */
 
+//OTOROL---------------------
+client.on("guildMemberAdd", member => {       
+    var ronney = qdb.fetch(`otorolrolu_${member.guild.id}`);
+  var rol = member.guild.roles.cache.get(ronney)
+ if(!rol) return; //Eğer sunucudaki rol silinirse otorol ayarı silinir
+   member.roles.add(rol.id)
+//-----Rol(ÜST)Yazı(ALT)-----\\
+var ales = qdb.fetch(`otorolkanali_${member.guild.id}`);
+var kanal = member.guild.channels.cache.get(ales)
+if(!kanal) return;
+kanal.send(`<@${member.id}> kişisi sunucuya katıldı, ${rol} rolü verildi. Hoşgeldin ${member.user.username}!`)
+});
 
 
 //SAYAÇ MESAJ  
