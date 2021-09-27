@@ -23,29 +23,29 @@ let guild = message.channel.guild
 const { createCanvas, loadImage } = require('canvas');
             const canvas = Canvas.createCanvas(1280, 920);
             const ctx = canvas.getContext("2d");
-var background = await loadImage("https://cdn.glitch.com/0bb90534-d183-4b5d-a865-453271102d9c%2F516.png?v=1632758143134");
+var background = await loadImage("https://cdn.glitch.com/0bb90534-d183-4b5d-a865-453271102d9c%2FASDASD.png?v=1632765725756");
             ctx.drawImage(background , 0 ,0 , canvas.width , canvas.height);
     const avatar = await Canvas.loadImage(kişi.displayAvatarURL({ format: 'jpg' }));
     ctx.drawImage(avatar , 930 , 45 , 320 , 320);
             
             ctx.font = '60px sans-serif';
-            ctx.fillStyle = "BLACK";
+            ctx.fillStyle = "#0aecfc";
             ctx.fillText(`\nBıçak:${bıçak}\nSilah:${silah}\nHaydar:${haydar}` , canvas.width / 35, 630 )
   ctx.font = '60px sans-serif';
-            ctx.fillStyle = "BLACK";
+            ctx.fillStyle = "#0aecfc";
             ctx.fillText(`${isim}` , canvas.width / 5.80, 250 )
    ctx.font = '60px sans-serif';
-            ctx.fillStyle = "BLACK";
+            ctx.fillStyle = "#0aecfc";
             ctx.fillText(`${guild.name}` , canvas.width / 3.20, 531 )
    ctx.font = '60px sans-serif';
-            ctx.fillStyle = "BLACK";
+            ctx.fillStyle = "#0aecfc";
             ctx.fillText(`${message.author.id}` , canvas.width / 5.80, 340 )
     ctx.font = '60px sans-serif';
-            ctx.fillStyle = "BLACK";
+            ctx.fillStyle = "#0aecfc";
             ctx.fillText(`\n${taxici}\n${Dolmuşcu}\n${aşçı}\n${kuyumcu}` , canvas.width / 1.43, 600 )
             
             ctx.font = '60px sans-serif';
-            ctx.fillStyle = "BLACK";
+            ctx.fillStyle = "#0aecfc";
             ctx.fillText(`${parapara}` , canvas.width / 12.11, 90 )
             
             const attachment = new Discord.MessageAttachment(
