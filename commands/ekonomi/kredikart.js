@@ -19,14 +19,14 @@ const { createCanvas, loadImage } = require('canvas');
 var background = await loadImage("https://cdn.glitch.com/0bb90534-d183-4b5d-a865-453271102d9c%2Foooo.png?v=1632749446473");
             ctx.drawImage(background , 0 ,0 , canvas.width , canvas.height);
     const avatar = await Canvas.loadImage(kişi.displayAvatarURL({ format: 'jpg' }));
-    ctx.drawImage(avatar , 500 , 200 , 250 , 250);
+    ctx.drawImage(avatar , 700 , 200 , 250 , 250);
             
             ctx.font = '60px sans-serif';
             ctx.fillStyle = "BLACK";
             ctx.fillText(`${message.author.id}` , canvas.width / 5, 550 )
   ctx.font = '60px sans-serif';
             ctx.fillStyle = "BLACK";
-            ctx.fillText(`${isim}` , canvas.width / 390, 340 )
+            ctx.fillText(`${isim}` , canvas.width / 3.22, 340 )
             
             ctx.font = '60px sans-serif';
             ctx.fillStyle = "BLACK";
