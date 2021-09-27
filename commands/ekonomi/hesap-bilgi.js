@@ -29,17 +29,17 @@ var background = await loadImage("https://cdn.glitch.com/0bb90534-d183-4b5d-a865
             
             ctx.font = '60px sans-serif';
             ctx.fillStyle = "BLACK";
-            ctx.fillText(`Envanter ↓ \nBıçak:${bıçak}\nSilah:${silah}\nHaydar:${haydar}` , canvas.width / 35, 700 )
+            ctx.fillText(`Envanter ↓ \nBıçak:${bıçak}\nSilah:${silah}\nHaydar:${haydar}` , canvas.width / 35, 670 )
   ctx.font = '60px sans-serif';
             ctx.fillStyle = "BLACK";
-            ctx.fillText(`${isim}` , canvas.width / 5, 300 )
+            ctx.fillText(`${isim}` , canvas.width / 1.80, 180 )
     ctx.font = '60px sans-serif';
             ctx.fillStyle = "BLACK";
             ctx.fillText(`Meslekler ↓\n${taxici}\n${Dolmuşcu}\n${aşçı}\n${kuyumcu}` , canvas.width / 1.43, 700 )
             
             ctx.font = '60px sans-serif';
             ctx.fillStyle = "BLACK";
-            ctx.fillText(`Para: ${parapara}` , canvas.width / 5, 400 )
+            ctx.fillText(`Para: ${parapara}` , canvas.width / 3.11, 120 )
             
             const attachment = new Discord.MessageAttachment(
               canvas.toBuffer(),
