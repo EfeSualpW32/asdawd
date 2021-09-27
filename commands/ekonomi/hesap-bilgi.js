@@ -16,7 +16,7 @@ let taxici = await db.fetch(`taxici_${message.author.id}`) || 'Meslek Yok'
 let Dolmuşcu = await db.fetch(`dolmuşcu_${message.author.id}`) || 'Meslek Yok'
 let aşçı = await db.fetch(`aşçı_${message.author.id}`) || 'Meslek Yok'
 let kuyumcu = await db.fetch(`kuyumcu_${message.author.id}`) || 'Meslek Yok'
-let guild = message.channel.guild
+var guild = message.channel.guild
 
   let parapara = await db.fetch(`para_${kişi.id}`) || 0
     let isim = await db.fetch(`hesapisim_${kişi.id}`) || 'Hesap Yok'
