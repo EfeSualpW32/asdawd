@@ -18,11 +18,15 @@ const { createCanvas, loadImage } = require('canvas');
             const ctx = canvas.getContext("2d");
 var background = await loadImage("https://cdn.glitch.com/0bb90534-d183-4b5d-a865-453271102d9c%2Foooo.png?v=1632749446473");
             ctx.drawImage(background , 0 ,0 , canvas.width , canvas.height);
-          
+    const avatar = await Canvas.loadImage(kişi.displayAvatarURL({ format: 'jpg' }));
+    ctx.drawImage(avatar , 500 , 200 , 250 , 250);
             
             ctx.font = '60px sans-serif';
             ctx.fillStyle = "BLACK";
             ctx.fillText(`${message.author.id}` , canvas.width / 5, 550 )
+  ctx.font = '60px sans-serif';
+            ctx.fillStyle = "BLACK";
+            ctx.fillText(`${kişi}` , canvas.width / 5, 550 )
             
             ctx.font = '60px sans-serif';
             ctx.fillStyle = "BLACK";
@@ -33,8 +37,6 @@ var background = await loadImage("https://cdn.glitch.com/0bb90534-d183-4b5d-a865
               "ooo.jpg"
               
             );
-            const avatar = await Canvas.loadImage(kişi.displayAvatarURL({ format: 'jpg' }));
-    ctx.drawImage(avatar, 250, 75, 150, 150);
             message.channel.send(attachment)
           };
 
