@@ -29,17 +29,20 @@ var background = await loadImage("https://cdn.glitch.com/0bb90534-d183-4b5d-a865
             
             ctx.font = '60px sans-serif';
             ctx.fillStyle = "BLACK";
-            ctx.fillText(`Envanter ↓ \nBıçak:${bıçak}\nSilah:${silah}\nHaydar:${haydar}` , canvas.width / 35, 670 )
+            ctx.fillText(`\nBıçak:${bıçak}\nSilah:${silah}\nHaydar:${haydar}` , canvas.width / 35, 630 )
   ctx.font = '60px sans-serif';
             ctx.fillStyle = "BLACK";
-            ctx.fillText(`${isim}` , canvas.width / 1.80, 180 )
+            ctx.fillText(`${isim}` , canvas.width / 5.30, 250 )
+   ctx.font = '60px sans-serif';
+            ctx.fillStyle = "BLACK";
+            ctx.fillText(`${message.author.id}` , canvas.width / 5.30, 340 )
     ctx.font = '60px sans-serif';
             ctx.fillStyle = "BLACK";
-            ctx.fillText(`Meslekler ↓\n${taxici}\n${Dolmuşcu}\n${aşçı}\n${kuyumcu}` , canvas.width / 1.43, 700 )
+            ctx.fillText(`\n${taxici}\n${Dolmuşcu}\n${aşçı}\n${kuyumcu}` , canvas.width / 1.43, 600 )
             
             ctx.font = '60px sans-serif';
             ctx.fillStyle = "BLACK";
-            ctx.fillText(`Para: ${parapara}` , canvas.width / 3.11, 120 )
+            ctx.fillText(`${parapara}` , canvas.width / 12.11, 90 )
             
             const attachment = new Discord.MessageAttachment(
               canvas.toBuffer(),
