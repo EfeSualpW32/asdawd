@@ -10,7 +10,7 @@ exports.run = async(client, message, args) => {
   }
   };
     var renks = `#36393f`
-    if(!args[0]) return message.reply ("Bir seçenek belirtiniz. Eğer kullanımı bilmiyorsanız "`${prefix}"otorol yardım`")
+    if(!args[0]) return message.reply (`Bir seçenek belirtiniz. Eğer kullanımı bilmiyorsanız \`${prefix}otorol yardım\``)
     if(args[0] == "ayarla" || args[0] == "aç") {
         if(args[1] == "kanal" ||args[1] == "channel") {
         var ales = message.mentions.channels.first() || message.guild.channel.cache.get(args[2]);
