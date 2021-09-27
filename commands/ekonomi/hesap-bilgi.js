@@ -8,18 +8,18 @@ const Canvas = require('canvas')
 const request = require('node-superfetch');
 
 exports.run = async (client, message, args) => {
-let kişi = message.mentions.users.first() || message.author
-let bıçak = await db.fetch(`bıçak_${message.author.id}`) || 'yok'
-let silah = await db.fetch(`silah_${message.author.id}`) || 'yok'
-let haydar = await db.fetch(`haydar_${message.author.id}`) || 'yok'
-let taxici = await db.fetch(`taxici_${message.author.id}`) || 'Meslek Yok'
-let Dolmuşcu = await db.fetch(`dolmuşcu_${message.author.id}`) || 'Meslek Yok'
-let aşçı = await db.fetch(`aşçı_${message.author.id}`) || 'Meslek Yok'
-let kuyumcu = await db.fetch(`kuyumcu_${message.author.id}`) || 'Meslek Yok'
+var kişi = message.mentions.users.first() || message.author
+var bıçak =  db.fetch(`bıçak_${message.author.id}`) || 'yok'
+var silah =  db.fetch(`silah_${message.author.id}`) || 'yok'
+var haydar =  db.fetch(`haydar_${message.author.id}`) || 'yok'
+var taxici =  db.fetch(`taxici_${message.author.id}`) || 'Meslek Yok'
+var Dolmuşcu =  db.fetch(`dolmuşcu_${message.author.id}`) || 'Meslek Yok'
+var aşçı =  db.fetch(`aşçı_${message.author.id}`) || 'Meslek Yok'
+var kuyumcu =  db.fetch(`kuyumcu_${message.author.id}`) || 'Meslek Yok'
 var guild = message.channel.guild
 
-  let parapara = await db.fetch(`para_${kişi.id}`) || 0
-    let isim = await db.fetch(`hesapisim_${kişi.id}`) || 'Hesap Yok'
+  var parapara =  db.fetch(`para_${kişi.id}`) || 0
+    var isim =  db.fetch(`hesapisim_${kişi.id}`) || 'Hesap Yok'
 const { createCanvas, loadImage } = require('canvas');
             const canvas = Canvas.createCanvas(1280, 920);
             const ctx = canvas.getContext("2d");
