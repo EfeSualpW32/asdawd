@@ -5,11 +5,6 @@ const slots = ['1','10','5','100','5000','3000','2000','1000','360','2670','5100
 exports.run = function(client, message, args) {
 
     var slot1 = slots[Math.floor(Math.random() * slots.length)];
-
- let parapara = db.fetch(`para_`)
-  
-  
-  let paragönderme = db.fetch(`para_${message.author.id}`)
   
     if (slot1) {
         message.channel.send(`
@@ -23,7 +18,7 @@ exports.run = function(client, message, args) {
 
         Kaybettin
         `);
-        db.add(`para_${message.author.id}`, slots, -parapara)
+        db.delete(`para_${message.author.id}`, slots)
   }
 };
 

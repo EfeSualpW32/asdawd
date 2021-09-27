@@ -56,7 +56,7 @@ exports.run = async (client, message, args) => {
     return message.reply(`Ürünü Başarıyla Aldınız`)
   }
   if (args[0] === 'taxici') {
-    db.push(`taxici_${message.author.id}`,"Taxi Şöförü")
+    db.set(`taxici_${message.author.id}`,"Taxi Şöförü")
     let para = await db.get(`para_${message.author.id}`) 
     let fiyatcık = 1000 // istediğiniz fiyat
     
@@ -69,7 +69,7 @@ exports.run = async (client, message, args) => {
     return message.reply(`Başarıyla Meslek Sahibi Oldunuz`)
   }
   if (args[0] === 'dolmuşcu') {
-    db.push(`dolmuşcu_${message.author.id}`,"Dolmuş Şöförü")
+    db.set(`dolmuşcu_${message.author.id}`,"Dolmuş Şöförü")
     let para = await db.get(`para_${message.author.id}`) 
     let fiyatcık = 1500 // istediğiniz fiyat
     
@@ -82,7 +82,7 @@ exports.run = async (client, message, args) => {
     return message.reply(`Başarıyla Meslek Sahibi Oldunuz`)
   }
   if (args[0] === 'aşcı') {
-    db.push(`aşçı_${message.author.id}`,"aşcı")
+    db.set(`aşçı_${message.author.id}`,"aşcı")
     let para = await db.get(`para_${message.author.id}`) 
     let fiyatcık = 2200 // istediğiniz fiyat
     
@@ -95,7 +95,7 @@ exports.run = async (client, message, args) => {
     return message.reply(`Başarıyla Meslek Sahibi Oldunuz`)
   }
   if (args[0] === 'kuyumcu') {
-    db.push(`kuyumcu_${message.author.id}`,"Kuyumcu")
+    db.set(`kuyumcu_${message.author.id}`,"Kuyumcu")
     let para = await db.get(`para_${message.author.id}`) 
     let fiyatcık = 7000 // istediğiniz fiyat
     
