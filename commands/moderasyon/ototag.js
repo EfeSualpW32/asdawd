@@ -10,12 +10,18 @@ exports.run = async(client, message, args) => {
     var prefix = "?";
   }
   };
-   if(!args[0]) return message.reply (`Bir seçenek belirtiniz. Eğer kullanımı bilmiyorsanız \`${prefix}ototag yardım\``)
+   if(!args[0]) return message.reply (new Discord.MessageEmbed()
+        .setColor(renks)
+        .setTitle('Oto-Tag Yardım')
+        .addField(`${prefix}ototag ayarla kanal`,'Ototag kanalını ayarlar')
+        .addField(`${prefix}ototag ayarla tag `,"Ototag  ayarlar")
+        .addField(`${prefix}ototag sıfırla`,"Ototag veritabanını sıfırlar")
+        .setFooter("EFDA OTOROL"))
   if (!message.member.permissions.has("ADMINISTRATOR")) return;
   if(!args[0] || args[0] !== "sıfırla"){
-  var tag = args[2]
-  if(!tag) return message.channel.send("Bir tag belirt!")
       if(args[0] == "ayarla" || args[0] == "aç") {
+        var tag = args[2]
+  if(!tag) return message.channel.send("Bir tag belirt!")
            if(args[1] == "kanal" ||args[1] == "channel") {
         var ales = message.mentions.channels.first() || message.guild.channel.cache.get(args[2]);
     if(!ales) return message.reply('Bir kanal belirtiniz.')
@@ -32,15 +38,6 @@ exports.run = async(client, message, args) => {
     return message.channel.send("Oto Tag Sıfırlandı!")
     
   }
-  
-   if(args[0] == "yardım" || args[0] == "help") {
-        const embedv1 = new Discord.MessageEmbed()
-        .setColor(renks)
-        .setTitle('Oto-Tag Yardım')
-        .addField(`${prefix}ototag ayarla kanal`,'Ototag kanalını ayarlar')
-        .addField(`${prefix}ototag ayarla (tag)`,"Ototag  ayarlar")
-        .addField(`${prefix}ototag sıfırla`,"Ototag veritabanını sıfırlar")
-        .setFooter("EFDA OTOROL")}
 }
 exports.conf = {
  aliases: ["oto-tag"],

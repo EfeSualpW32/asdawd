@@ -1002,7 +1002,7 @@ client.on("guildMemberAdd", member => {
     var ss = qdb.fetch(`ototagkanali_${member.guild.id}`)
   var kanal = member.guild.channels.cache.get(ss)
   if(!kanal) return;
-  kanal.send(new Discord.MessageEmbed().setColor('#36393f').setDescription(`<@${member.id}> kişisi sunucuya katıldı, (${!tag}) Tag Verildi ${member.user.username}!`))
+  kanal.send(new Discord.MessageEmbed().setColor('#36393f').setDescription(`<@${member.id}> kişisi sunucuya katıldı, (${tag}) Tag Verildi || \`${tag}${member.user.username}!\``))
   if(!tag) return;
   member.setNickname(`${tag}${member.user.username}`)
   })
