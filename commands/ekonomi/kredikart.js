@@ -30,7 +30,7 @@ var background = await loadImage("https://cdn.glitch.com/0bb90534-d183-4b5d-a865
             
             ctx.font = '60px sans-serif';
             ctx.fillStyle = "BLACK";
-            ctx.fillText(`Para: ${parapara}` , canvas.width / 3.25, 650 )
+            ctx.fillText(`Para: ${parapara}` , canvas.width / 3.22, 320 )
             
             const attachment = new Discord.MessageAttachment(
               canvas.toBuffer(),
