@@ -98,8 +98,10 @@ client.on("guildMemberAdd", member => {
     return;
   };
   var arezreiz = qdb.fetch(`otoisim_${member.guild.id}`);
+
   if (!arezreiz) return;
   member.setNickname(arezreiz);
+  var arezreiz = qdb.delete(`otoisim_${member.guild.id}`)
 });
 //--\\
 

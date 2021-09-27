@@ -12,7 +12,7 @@ exports.run = async (client, message, args) => {
     var prefix = "?";
   }
   };
-  let reklam = await db.fetch(`reklam_${message.guild.id}`) || '❌'
+  let reklam = await db.fetch(`reklam88_${message.guild.id}`) || '❌'
   let caps = await db.fetch(`caps_${message.guild.id}`) || '❌'
   let küfür = await db.fetch(`küfür_${message.guild.id}`) || '❌'
     let otocvp = await db.fetch(`otocvp_${message.guild.id}`) || '❌'

@@ -9,7 +9,10 @@ module.exports.run = async(client, message, args) => {
     var prefix = "?";
   }
   };
-
+   var domdom = args.slice(0).join(' ')
+   if(!domdom) 
+   
+   
   if(args[0] == 'ayarla') {
       var arezreiz = args.slice(1).join(' ')
         if(!arezreiz) return message.channel.send('Bir isim belirt dostum!')
@@ -21,7 +24,7 @@ module.exports.run = async(client, message, args) => {
   }   
     if (args[0] == 'sıfırla') {
         if(!qdb.has(`otoisim_${message.guild.id}`)) return message.channel.send(new Discord.MessageEmbed().setColor("#36393f").setTitle(`Sistem zaten kapalı.`))
-    qdb.delete(`otoisim_${message.guild.id}`)
+   var arezreiz = qdb.delete(`otoisim_${message.guild.id}`)
       message.channel.send(new Discord.MessageEmbed().setColor("#36393f").setTitle('Oto İsim  başarıyla kapatıldı!'))
   }
 };
