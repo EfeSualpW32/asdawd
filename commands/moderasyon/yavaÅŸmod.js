@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const qdb = require('quick.db');
 
 exports.run = async(client, msg, args) => {
 var renk =('#36393f')
@@ -40,7 +41,6 @@ if (limit > 21600) {
     .setThumbnail(`https://dummyimage.com/500x500/2f3136f/f2f2f2&text=${limit}%20Saniye`)
     .setColor(renk)
     msg.channel.send({embed: e})
-  
 var request = require('request');
 request({
     url: `https://discordapp.com/api/v7/channels/${msg.channel.id}`,

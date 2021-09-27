@@ -10,7 +10,7 @@ module.exports.run = async(client, message, args) => {
   }
   };
    var domdom = args.slice(0).join(' ')
-   if(!domdom) 
+   if(!domdom)  return message.channel.send(new Discord.MessageEmbed().setTitle('OTO İSİM SİSTEMİ').setDescription(`Oto İsim Belirlemek İçin ↓\n\n\`${prefix}otoisim ayarla (verilcek isim)\`\n\n\`${prefix}otoisim sıfırla\` `))
    
    
   if(args[0] == 'ayarla') {
