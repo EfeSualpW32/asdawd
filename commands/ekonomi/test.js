@@ -19,7 +19,8 @@ let paragönderme = args.slice(1).join(' ')
 
 if (!paragönderme) return message.reply('Miktar Belirt')
   
-  ///yenı komut yerı acıyorum tamam
+let parapara = await db.fetch(`para_${kişi.id}`) || 0 
+
   if (isNaN(paragönderme)) return message.reply('Para Miktarını Nası Sayısız Yazıcaksın?')
   
   if (parası < paragönderme) return message.reply('Paradan Büyük Miktar Gönderemezssin')
@@ -34,11 +35,14 @@ var background = await loadImage("https://cdn.glitch.com/0bb90534-d183-4b5d-a865
 
             ctx.font = '20px sans-serif';
             ctx.fillStyle = "BLACK";
-            ctx.fillText(`${kişi.user.tag} Gönderilen Miktar ${paragönderme}` , canvas.width / 10, 320 )
-            
+            ctx.fillText(`${kişi.user.tag} Gönderilen Miktar ${paragönderme}` , canvas.width / 20, 310 )
             ctx.font = '20px sans-serif';
             ctx.fillStyle = "BLACK";
-            ctx.fillText(`Parandan Düşülen Mİktar: ${paragönderme}` , canvas.width / 10, 420 )
+            ctx.fillText(`${kişi.user.tag} Kişisinin Toplam ${parapara} TL Parası Var` , canvas.width / 20, 340 )
+            
+            ctx.font = '25px sans-serif';
+            ctx.fillStyle = "BLACK";
+            ctx.fillText(`Parandan Düşülen Mİktar: ${paragönderme}` , canvas.width / 20, 385 )
             
             const attachment = new Discord.MessageAttachment(
               canvas.toBuffer(),
