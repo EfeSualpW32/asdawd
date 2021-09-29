@@ -14,7 +14,7 @@ exports.run = async(client, message, args, member) => {
   };
     if (!args[0]) return message.channel.send(`Merhaba eğer beyaz liste özelliğini kullanmak istiyorsanız **?beyaz-liste al** eğer kara liste özelliğini kullanmak istiyorsanız **!kara-liste al** kullanınız`) 
   if (args[0] === 'al') {
-      let engin
+      let engin = args[1]
     if(!engin) return message.channel.send('Lütfen kara listeden çıkaracağım kişiyi yaz!')
  
       db.delete(`karaliste_${engin}`)

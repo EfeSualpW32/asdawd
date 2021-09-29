@@ -5,7 +5,7 @@ const db = new Database("./kasalıst.json");
 exports.run = async(client, message, args) => {
     if (!args[0]) return message.channel.send(`Merhaba kara liste özelliğini kullanmak istiyor iseniz **!karaliste al** yazınız. Kara listedeki birini çıkartmak istiyor iseniz **!beyaz-liste al** komutunu kullanınız!`) 
   if (args[0] === 'al') {
-    let engin = message.mentions.users.first()
+    let engin = message.mentions.user.first || args[1]
     if(!engin) return message.channel.send('Lütfen kara listeye alacağım kişiyi yaz!')
  
       db.set(`karaliste_${engin.id}`, 'karalistede')
