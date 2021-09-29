@@ -30,19 +30,16 @@ let parapara = await db.fetch(`para_${kişi.id}`) || 0
   const { createCanvas, loadImage } = require('canvas');
             const canvas = Canvas.createCanvas(1092, 678);
             const ctx = canvas.getContext("2d");
-var background = await loadImage("https://cdn.glitch.com/0bb90534-d183-4b5d-a865-453271102d9c%2Fawdawd.png?v=1632913663132");
+var background = await loadImage("https://cdn.glitch.com/0bb90534-d183-4b5d-a865-453271102d9c%2Fawdawd.png?v=1632915090260");
             ctx.drawImage(background , 0 ,0 , canvas.width , canvas.height);
 
             ctx.font = '20px sans-serif';
             ctx.fillStyle = "BLACK";
-            ctx.fillText(`${kişi.user.tag} Gönderilen Miktar ${paragönderme}` , canvas.width / 20, 310 )
+            ctx.fillText(`${kişi.user.tag} Cüzdan = ${parapara} TL` , canvas.width / 70, 340 )
+            
             ctx.font = '20px sans-serif';
             ctx.fillStyle = "BLACK";
-            ctx.fillText(`${kişi.user.tag} Kişisinin Toplam ${parapara} TL Parası Var` , canvas.width / 20, 340 )
-            
-            ctx.font = '25px sans-serif';
-            ctx.fillStyle = "BLACK";
-            ctx.fillText(`Parandan Düşülen Mİktar: ${paragönderme}` , canvas.width / 20, 385 )
+            ctx.fillText(`${kişi.user.tag} Gönderilen Miktar ${paragönderme}` , canvas.width / 70, 220 )
             
             const attachment = new Discord.MessageAttachment(
               canvas.toBuffer(),
