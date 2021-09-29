@@ -3,7 +3,7 @@ const Database = require("plasma-db");
 const db = new Database("./beyazlıst.json"); 
 const qdb = require('quick.db');
  
-exports.run = async(client, message, args) => {
+exports.run = async(client, message, args, member) => {
     if(!message.guild){
     var prefix = "?";
   } else {
@@ -12,17 +12,15 @@ exports.run = async(client, message, args) => {
     var prefix = "?";
   }
   };
-var kısı = args[0]
-
     if (!args[0]) return message.channel.send(`Merhaba eğer beyaz liste özelliğini kullanmak istiyorsanız **?beyaz-liste al** eğer kara liste özelliğini kullanmak istiyorsanız **!kara-liste al** kullanınız`) 
   if (args[0] === 'al') {
-      let engin = message.mentions.users.first() 
+      let engin
     if(!engin) return message.channel.send('Lütfen kara listeden çıkaracağım kişiyi yaz!')
  
-      db.delete(`karaliste_${engin.id}`)
+      db.delete(`karaliste_${engin}`)
     const embed = new Discord.MessageEmbed()
     .setColor('RANDOM')
-    .setDescription(`Merhaba sahibim! \n <@${engin.id}> adlı kişiyi başarı ile karalisteden çıkardım! \n Bundan sonra beni kullanabilecek!`)
+    .setDescription(`Merhaba sahibim! \n <@${engin}> adlı kişiyi başarı ile karalisteden çıkardım! \n Bundan sonra beni kullanabilecek!`)
    return message.channel.send(embed)
   };
  
