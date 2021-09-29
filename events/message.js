@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const ayarlar = require("../config.json");
 const db = require("quick.db");
+const talkedRecently = new Set();
 
 module.exports = message => {
       
@@ -99,10 +100,10 @@ module.exports = message => {
  
 		
     if (perms < cmd.conf.permLevel) return;
-     if (db.fetch(`karaliste_${message.author.id}`)) return message.channel.send('EFDA BOT\'TAN BANLANMIŞSIN')
+    if (db.fetch(`karaliste_${message.author.id}`)) return message.channel.send('Benim kara listemde bulunuyorsun!')
     cmd.run(client, message, params, perms);
     
-     }  
+     }
 
   if (!client.commands.has(command)) {
     if (client.aliases.has(command)) {
