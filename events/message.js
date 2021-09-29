@@ -100,7 +100,7 @@ module.exports = message => {
  
 		
     if (perms < cmd.conf.permLevel) return;
-    if (db.fetch(`karaliste_${message.author.id}`)) return message.channel.send('Benim kara listemde bulunuyorsun!')
+    if (db.fetch(`karalıst_${message.author.id}`)) return message.channel.send('Benim kara listemde bulunuyorsun!')
     cmd.run(client, message, params, perms);
     
      }

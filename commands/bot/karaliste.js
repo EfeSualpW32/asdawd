@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const Database = require("plasma-db");
-const db = new Database("./kasalıst.json"); 
+const db = new Database("./karalıst.json"); 
 const qdb = require('quick.db')
  
 exports.run = async(client, message, args) => {
@@ -17,7 +17,7 @@ exports.run = async(client, message, args) => {
     let engin = args[1]
     if(!engin) return message.channel.send('Lütfen kara listeye alacağım kişiyi yaz!')
  
-      db.set(`karaliste_${engin}`, 'karalistede')
+      db.set(`karalıst_${engin}`, 'karalistede')
     const embed = new Discord.MessageEmbed()
     .setColor('RANDOM')
     .setDescription(`Merhaba sahibim! \n <@${engin}> adlı kişiyi başarı ile karalisteye aldım! \n Bundan sonra beni kullanamayacak!`)
