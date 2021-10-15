@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-exports.run = async (client, msg) => {
+exports.run = async (client, msg, args) => {
 
 const radio = {
     "number1": "http://20723.live.streamtheworld.com/NUMBER1FM_SC?type=.mp3",
@@ -11,30 +11,27 @@ const radio = {
     "civasradyo": "http://radyo1.radyo-dinle.tc:8170/stream",
     "slowtr": "https://radyo.dogannet.tv/slowturk",
     "joyturk": "http://17733.live.streamtheworld.com/JOY_TURK_SC",
-    "ulkufm": "http://yayin.canliradyolive.com/ulku-fm/live/icecast.audio",
 }
             if (!msg.guild.voiceConnection) {
                 if (!msg.member.voice.channel) return msg.channel.send('❎ | Lütfen bir **odaya gir!**')
             }
-            let args = msg.content.split(" ").slice(1).join(" ").toLowerCase();
-      if (!args) return msg.channel.send('❎ | Bir **radyo seçin:** **civasradyo** | **powerturk** | **fenomen** | **metrofm** | **number1** | **joyturk** | **slowtr** | **ulkufm**')
-        if(!radio[args]) return msg.channel.send('❎ | Lütfen yandaki Radyolardan **birini seç:** **civasradyo** | **number1** | **powerturk** | **fenomen** | **metrofm** | **joyturk** | **slowtr** | **ulkufm**')
+            let ss = msg.content.split(" ").slice(1).join(" ").toLowerCase();
+      if (!ss) return msg.channel.send('❎ | Bir **radyo seçin:** **civasradyo** | **powerturk** | **fenomen** | **metrofm** | **number1** | **joyturk** | **slowtr** | **ulkufm**')
+        if(!radio[ss]) return msg.channel.send('❎ | Lütfen yandaki Radyolardan **birini seç:** **civasradyo** | **number1** | **powerturk** | **fenomen** | **metrofm** | **joyturk** | **slowtr**')
     msg.member.voice.channel.join().then(connection => {
-    require('http').get(radio[args], (res) => {
+    require('http').get(radio[ss], (res) => {
             connection.play(res);
      let embed = new Discord.MessageEmbed()
         .setAuthor("Radyo Çalınıyor", `https://cdn.discordapp.com/emojis/475822981277286400.gif`)
         .setColor("RANDOM")
-        .addField("RADYO", args)
+        .addField("RADYO", ss)
         .setFooter(msg.author.username, msg.author.avatarURL());
      msg.channel.send(embed);
           });
+      
   });
-  client.on('message', msg => {
-  if (msg.author.id === client.user.id) return
-  if (msg.content.startsWith('radyo-kapat')) {
-
-    if (!msg.member.voice.channel) return msg.channel.send(new Discord.MessageEmbed()
+  if (args[1] === "kapat") {
+ if (!msg.member.voice.channel) return msg.channel.send(new Discord.MessageEmbed()
     .setColor('#C34E4E')
     .setDescription('❎ | Sesli bir kanalda değilsin!'));
 
@@ -42,8 +39,7 @@ const radio = {
     return msg.channel.send(new Discord.MessageEmbed()
     .setColor('#C34E4E')
     .setDescription('❎ | Radyo kapatıldı!'));
-
-}});
+ }
 };
 exports.conf = {
     enabled: true,
