@@ -21,7 +21,7 @@ const radio = {
         if(!radio[args]) return msg.channel.send('❎ | Lütfen yandaki Radyolardan **birini seç:** **civasradyo** | **number1** | **powerturk** | **fenomen** | **metrofm** | **joyturk** | **slowtr** | **ulkufm**')
     msg.member.voice.channel.join().then(connection => {
     require('http').get(radio[args], (res) => {
-           
+            connection.play(res);
      let embed = new Discord.MessageEmbed()
         .setAuthor("Radyo Çalınıyor", `https://cdn.discordapp.com/emojis/475822981277286400.gif`)
         .setColor("RANDOM")

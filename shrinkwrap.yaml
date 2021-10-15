@@ -18,6 +18,7 @@ dependencies:
   discord.js: 12.5.3
   discord.js-minesweeper: 1.0.6
   express: 4.17.1
+  ffmpeg: 0.0.4
   figlet: 1.5.0
   film-apisi: 1.0.0
   fs: 0.0.2
@@ -35,6 +36,7 @@ dependencies:
   node-html-to-image: 3.1.0
   node-superfetch: 0.2.3
   nukleon: 0.0.2
+  opusscript: 0.0.8
   os: 0.1.1
   parse-ms: 2.1.0
   plasma-db: 1.1.0
@@ -1768,6 +1770,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-JcfInLH5B3+IkbvmHY85Dq4lbx4=
+  /ffmpeg/0.0.4:
+    dependencies:
+      when: 3.7.8
+    dev: false
+    resolution:
+      integrity: sha1-HEYN+OfaUSf2LO70v6BsWciWMMs=
   /figlet/1.5.0:
     dev: false
     engines:
@@ -3162,6 +3170,10 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-RV2Zp2MY2aeYK5G+B/Sps8lW5NHAzE5QClbFP15j+PWmP+T9PxlJXBOOLoSAdgwFvS4t0aMR4vpedMkbHfh0nA==
+  /opusscript/0.0.8:
+    dev: false
+    resolution:
+      integrity: sha512-VSTi1aWFuCkRCVq+tx/BQ5q9fMnQ9pVZ3JU4UHKqTkf0ED3fKEPdr+gKAAl3IA2hj9rrP6iyq3hlcJq3HELtNQ==
   /os/0.1.1:
     dev: false
     resolution:
@@ -4294,6 +4306,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-lmRU6HZUYuN2RNNib2dCzotwll0=
+  /when/3.7.8:
+    dev: false
+    resolution:
+      integrity: sha1-xxMLan6gRpPoQs3J56Hyqjmjn4I=
   /which-module/2.0.0:
     dev: false
     resolution:
@@ -4486,6 +4502,7 @@ specifiers:
   discord.js: ^12.5.1
   discord.js-minesweeper: ^1.0.6
   express: ^4.17.1
+  ffmpeg: ^0.0.4
   figlet: ^1.5.0
   film-apisi: ^1.0.0
   fs: ^0.0.2
@@ -4503,6 +4520,7 @@ specifiers:
   node-html-to-image: ^3.0.1
   node-superfetch: ^0.2.3
   nukleon: ^0.0.2
+  opusscript: ^0.0.8
   os: ^0.1.1
   parse-ms: ^2.1.0
   plasma-db: ^1.0.0
