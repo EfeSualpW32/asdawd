@@ -43,6 +43,7 @@ dependencies:
   qrcode: 1.4.4
   quick.db: 7.1.3
   random-puppy: 1.1.0
+  reaction-role: 4.1.1
   request: 2.88.2
   request-promise-native: 1.0.9
   simple-youtube-api: 5.2.1
@@ -551,6 +552,19 @@ packages:
     dev: false
     resolution:
       integrity: sha512-mVRvYnTOZJz3ccpxhr3wgxVmSeiYinW+zlzQz3SXWaJmD1DuL05Jeq7nKw3SnbKmbleW5qrLG5vdyWe/A9sXhw==
+  /@types/bson/4.0.5:
+    dependencies:
+      '@types/node': 16.11.0
+    dev: false
+    resolution:
+      integrity: sha512-vVLwMUqhYJSQ/WKcE60eFqcyuWse5fGH+NMAXHuKrUAPoryq3ATxk5o4bgYNtg5aOM4APVg7Hnb3ASqUYG0PKg==
+  /@types/bson/4.2.0:
+    dependencies:
+      bson: 4.5.3
+    deprecated: 'This is a stub types definition. bson provides its own type definitions, so you do not need this installed.'
+    dev: false
+    resolution:
+      integrity: sha512-ELCPqAdroMdcuxqwMgUpifQyRoTpyYCNr1V9xKyF40VsBobsj+BbWNRvwGchMgBPGqkw655ypkjj2MEF5ywVwg==
   /@types/cacheable-request/6.0.1:
     dependencies:
       '@types/http-cache-semantics': 4.0.0
@@ -581,10 +595,27 @@ packages:
     dev: false
     resolution:
       integrity: sha512-66o54Py66NyYxb9/za2dH01ZsD1PCbPdJeys1VMhlitE4lrbmF3akpICzVmzkaiL6byCeG8iClfhD5ThZGu8+A==
+  /@types/mongodb/3.6.20:
+    dependencies:
+      '@types/bson': 4.2.0
+      '@types/node': 16.11.0
+    dev: false
+    resolution:
+      integrity: sha512-WcdpPJCakFzcWWD9juKoZbRtQxKIMYF/JIAM4JrNHrMcnJL6/a2NWjXxW7fo9hxboxxkg+icff8d7+WIEvKgYQ==
   /@types/node/15.3.1:
     dev: false
     resolution:
       integrity: sha512-weaeiP4UF4XgF++3rpQhpIJWsCTS4QJw5gvBhQu6cFIxTwyxWIe3xbnrY/o2lTCQ0lsdb8YIUDUvLR4Vuz5rbw==
+  /@types/node/16.11.0:
+    dev: false
+    resolution:
+      integrity: sha512-8MLkBIYQMuhRBQzGN9875bYsOhPnf/0rgXGo66S2FemHkhbn9qtsz9ywV1iCG+vbjigE4WUNVvw37Dx+L0qsPg==
+  /@types/redis/2.8.32:
+    dependencies:
+      '@types/node': 16.11.0
+    dev: false
+    resolution:
+      integrity: sha512-7jkMKxcGq9p242exlbsVzuJb57KqHRhNl4dHoQu2Y5v9bCAbtIXXH0R3HleSQW4CTOqpHIYUW3t6tpUj4BVQ+w==
   /@types/responselike/1.0.0:
     dependencies:
       '@types/node': 15.3.1
@@ -903,6 +934,18 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha512-dhEPs72UPbDnAQJ9ZKMNTP6ptJaionhP5cBb541nXPlW60Jepo9RV/a4fX4XWW9CuFNK22krhrj1+rgzifNCsw==
+  /bookman/3.3.2:
+    dependencies:
+      handy-redis: 2.3.1
+      lodash.get: 4.4.2
+      lodash.has: 4.5.2
+      lodash.set: 4.3.2
+      lodash.unset: 4.5.2
+      mongoose: /mongoose/5.13.11/mongoose@5.13.11
+      redis: 3.1.2
+    dev: false
+    resolution:
+      integrity: sha512-1/vyQBG4xmB4Kv8G1XEdHDXGbsOFShfCfxixasoMbStUeyFP6pwU3Gz7SYMZjZUAFqSztqjgFWhsIZ805iuCDg==
   /boolbase/1.0.0:
     dev: false
     resolution:
@@ -932,6 +975,14 @@ packages:
       node: '>=0.6.19'
     resolution:
       integrity: sha512-EvVNVeGo4tHxwi8L6bPj3y3itEvStdwvvlojVxxbyYfoaxJ6keLgrTuKdyfEAszFK+H3olzBuafE0yoh0D1gdg==
+  /bson/4.5.3:
+    dependencies:
+      buffer: 5.7.1
+    dev: false
+    engines:
+      node: '>=6.9.0'
+    resolution:
+      integrity: sha512-qVX7LX79Mtj7B3NPLzCfBiCP6RAsjiV8N63DjlaVVpZW+PFoDTxQ4SeDbSpcqgE6mXksM5CAwZnXxxxn/XwC0g==
   /buffer-alloc-unsafe/1.1.0:
     dev: false
     resolution:
@@ -1048,6 +1099,15 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-diHzdDKxcU+bAsUboHLPEDQiw0qEe0qd7SYUn3HgcFlWgbDcfLGswOHYeGrHKzG9z6UYf01d9VFMfZxPM1xZSg==
+  /chalk/4.1.2:
+    dependencies:
+      ansi-styles: 4.3.0
+      supports-color: 7.2.0
+    dev: false
+    engines:
+      node: '>=10'
+    resolution:
+      integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==
   /chance/1.1.7:
     dev: false
     resolution:
@@ -1410,6 +1470,12 @@ packages:
       node: '>=0.10'
     resolution:
       integrity: sha512-CYiCSgIF1p6EUByQPlGkKnP1M9g0ZV3qMIrqMqZqdwazygIA/YP2vrbcyl1h/WppKJTdl1F85cXIle+394iDAQ==
+  /denque/1.5.1:
+    dev: false
+    engines:
+      node: '>=0.10'
+    resolution:
+      integrity: sha512-XwE+iZ4D6ZUB7mfYRMb5wByE8L74HCn30FBN7sWnXksWc1LO1bPDl67pBR9o/kC4z/xSNAwkMYcGgqDV3BE3Hw==
   /depd/1.1.2:
     dev: false
     engines:
@@ -2096,6 +2162,14 @@ packages:
       uglify-js: 3.13.7
     resolution:
       integrity: sha512-aAcXm5OAfE/8IXkcZvCepKU3VzW1/39Fb5ZuqMtgI/hT8X2YgoMvBY5dLhq/cpOvw7Lk1nK/UF71aLG/ZnVYRA==
+  /handy-redis/2.3.1:
+    dependencies:
+      '@types/redis': 2.8.32
+    dev: false
+    engines:
+      node: '>= 10.0.0'
+    resolution:
+      integrity: sha512-ilZYZ4l9+BSxavnjzSbI0yNpM8wfuEP8wAjsPAoL5ThfcCEswN7EpuSCJ4PfRpuGvxRRrivjSImbqpM9NkDB7w==
   /har-schema/2.0.0:
     dev: false
     engines:
@@ -2522,6 +2596,14 @@ packages:
     dev: false
     resolution:
       integrity: sha1-Gmo16s5AEoDH8G3d7DUWWrJ+PlM=
+  /lodash.get/4.4.2:
+    dev: false
+    resolution:
+      integrity: sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
+  /lodash.has/4.5.2:
+    dev: false
+    resolution:
+      integrity: sha1-0Z9NwQlQWMzL4rDN9O4P5Ko3yGI=
   /lodash.map/4.6.0:
     dev: false
     resolution:
@@ -2542,10 +2624,18 @@ packages:
     dev: false
     resolution:
       integrity: sha1-gNZJLcFHCGS79YNTO2UfQqn1JBU=
+  /lodash.set/4.3.2:
+    dev: false
+    resolution:
+      integrity: sha1-2HV7HagH3eJIFrDWqEvqGnYjCyM=
   /lodash.some/4.6.0:
     dev: false
     resolution:
       integrity: sha1-G7nzFO9ri63tE7VJFpsqlF62jk0=
+  /lodash.unset/4.5.2:
+    dev: false
+    resolution:
+      integrity: sha1-Nw0dPoW3Kn4bDN8tJyEhMG8j5O0=
   /lodash/4.17.21:
     dev: false
     resolution:
@@ -2799,9 +2889,32 @@ packages:
       saslprep: 1.0.3
     resolution:
       integrity: sha512-WlirMiuV1UPbej5JeCMqE93JRfZ/ZzqE7nJTwP85XzjAF4rRSeq2bGCb1cjfoHLOF06+HxADaPGqT0g3SbVT1w==
+  /mongodb/3.7.2:
+    dependencies:
+      bl: 2.2.1
+      bson: 1.1.6
+      denque: 1.5.1
+      optional-require: 1.1.8
+      safe-buffer: 5.2.1
+    dev: false
+    engines:
+      node: '>=4'
+    optionalDependencies:
+      saslprep: 1.0.3
+    resolution:
+      integrity: sha512-/Qi0LmOjzIoV66Y2JQkqmIIfFOy7ZKsXnQNlUXPFXChOw3FCdNqVD5zvci9ybm6pkMe/Nw+Rz9I0Zsk2a+05iQ==
   /mongoose-legacy-pluralize/1.0.2/mongoose@5.12.10:
     dependencies:
       mongoose: /mongoose/5.12.10/mongoose@5.12.10
+    dev: false
+    id: registry.npmjs.org/mongoose-legacy-pluralize/1.0.2
+    peerDependencies:
+      mongoose: '*'
+    resolution:
+      integrity: sha512-Yo/7qQU4/EyIS8YDFSeenIvXxZN+ld7YdV9LqFVQJzTLye8unujAWPZ4NWKfFA+RNjh+wvTWKY9Z3E5XM6ZZiQ==
+  /mongoose-legacy-pluralize/1.0.2/mongoose@5.13.11:
+    dependencies:
+      mongoose: /mongoose/5.13.11/mongoose@5.13.11
     dev: false
     id: registry.npmjs.org/mongoose-legacy-pluralize/1.0.2
     peerDependencies:
@@ -2828,12 +2941,40 @@ packages:
     id: registry.npmjs.org/mongoose/5.12.10
     resolution:
       integrity: sha512-/VmFFEACH2yiuPcJoBjOzVTXozBhCeminVbWI8mxiZwvgCbNu9PQrIABIgeCJncnZH8VT4G7s2IXO5FySxF1XA==
+  /mongoose/5.13.11/mongoose@5.13.11:
+    dependencies:
+      '@types/bson': 4.0.5
+      '@types/mongodb': 3.6.20
+      bson: 1.1.6
+      kareem: 2.3.2
+      mongodb: 3.7.2
+      mongoose-legacy-pluralize: /mongoose-legacy-pluralize/1.0.2/mongoose@5.13.11
+      mpath: 0.8.4
+      mquery: 3.2.5
+      ms: 2.1.2
+      optional-require: 1.0.3
+      regexp-clone: 1.0.0
+      safe-buffer: 5.2.1
+      sift: 13.5.2
+      sliced: 1.0.1
+    dev: false
+    engines:
+      node: '>=4.0.0'
+    id: registry.npmjs.org/mongoose/5.13.11
+    resolution:
+      integrity: sha512-hVHm864eBpaCr0W6CF7qTmC62dmepnT+A6ZnqKPU9asw7jjYHBcBxPgCnrGBMUACbZtzidO6HmB4J3F1YU2rdg==
   /mpath/0.8.3:
     dev: false
     engines:
       node: '>=4.0.0'
     resolution:
       integrity: sha512-eb9rRvhDltXVNL6Fxd2zM9D4vKBxjVVQNLNijlj7uoXUy19zNDsIif5zR+pWmPCWNKwAtqyo4JveQm4nfD5+eA==
+  /mpath/0.8.4:
+    dev: false
+    engines:
+      node: '>=4.0.0'
+    resolution:
+      integrity: sha512-DTxNZomBcTWlrMW76jy1wvV37X/cNNxPW1y2Jzd4DZkAaC5ZGsm8bfGfNOthcDuRJujXLqiuS6o3Tpy0JEoh7g==
   /mquery/3.2.5:
     dependencies:
       bluebird: 3.5.1
@@ -3170,6 +3311,14 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-RV2Zp2MY2aeYK5G+B/Sps8lW5NHAzE5QClbFP15j+PWmP+T9PxlJXBOOLoSAdgwFvS4t0aMR4vpedMkbHfh0nA==
+  /optional-require/1.1.8:
+    dependencies:
+      require-at: 1.0.6
+    dev: false
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-jq83qaUb0wNg9Krv1c5OQ+58EK+vHde6aBPzLvPPqJm89UQWsvSuFy9X/OSNJnFeSOKo7btE0n8Nl2+nE+z5nA==
   /opusscript/0.0.8:
     dev: false
     resolution:
@@ -3330,6 +3479,13 @@ packages:
       node: '>=4.0.0'
     resolution:
       integrity: sha512-NCrCHhWmnQklfH4MtJMRjZ2a8c80qXeMlQMv2uVp9ISJMTt562SbGd6n2oq0PaPgKm7Z6pL9E2UlLIhC+SHL3w==
+  /pogger/0.0.8:
+    dependencies:
+      chalk: 4.1.2
+      supports-color: 8.1.1
+    dev: false
+    resolution:
+      integrity: sha512-AO7Fdyu17VxSXWQw0rrTcREn4ayh1pBrHI3vyOaf4vOMY/QFf9oL0Fe3S9delHIzmdMbtW0sLTQaQUVK8sDqGA==
   /prebuild-install/6.1.2:
     dependencies:
       detect-libc: 1.0.3
@@ -3532,6 +3688,15 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==
+  /reaction-role/4.1.1:
+    dependencies:
+      bookman: 3.3.2
+      discord.js: 12.5.3
+      lodash: 4.17.21
+      pogger: 0.0.8
+    dev: false
+    resolution:
+      integrity: sha512-chs2/W3JuN4CRqTEjHbQouCBIK5GiiOnR8hBvMK2y4YXxrmdcD029V5lp1XyzXGGWntniGPHcsAvGWXohgXwwA==
   /readable-stream/2.3.7:
     dependencies:
       core-util-is: 1.0.2
@@ -3554,6 +3719,35 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-BViHy7LKeTz4oNnkcLJ+lVSL6vpiFeX6/d3oSH8zCW7UxP2onchk+vTGB143xuFjHS3deTgkKoXXymXqymiIdA==
+  /redis-commands/1.7.0:
+    dev: false
+    resolution:
+      integrity: sha512-nJWqw3bTFy21hX/CPKHth6sfhZbdiHP6bTawSgQBlKOVRG7EZkfHbbHwQJnrE4vsQf0CMNE+3gJ4Fmm16vdVlQ==
+  /redis-errors/1.2.0:
+    dev: false
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-62LSrbFeTq9GEMBK/hUpOEJQq60=
+  /redis-parser/3.0.0:
+    dependencies:
+      redis-errors: 1.2.0
+    dev: false
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-tm2CjNyv5rS4pCin3vTGvKwxyLQ=
+  /redis/3.1.2:
+    dependencies:
+      denque: 1.5.1
+      redis-commands: 1.7.0
+      redis-errors: 1.2.0
+      redis-parser: 3.0.0
+    dev: false
+    engines:
+      node: '>=10'
+    resolution:
+      integrity: sha512-grn5KoZLr/qrRQVwoSkmzdbw6pwF+/rwODtrOr6vuBRiR/f3rjSTGupbF90Zpqm2oenix8Do6RV7pYEkGwlKkw==
   /redstar/0.0.2:
     dependencies:
       minimatch: 3.0.4
@@ -3647,6 +3841,12 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-MsvtOrfG9ZcrOwAW+Qi+F6HbD0CWXEh9ou77uOb7FM2WPhwT7smM833PzanhJLsgXjN89Ir6V2PczXNnMpwKhw==
+  /require-at/1.0.6:
+    dev: false
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-7i1auJbMUrXEAZCOQ0VNJgmcT2VOKPRl2YGJwgpHpC9CE91Mv4/4UYIUm4chGJaI381ZDq1JUicFii64Hapd8g==
   /require-directory/2.1.1:
     dev: false
     engines:
@@ -3993,6 +4193,14 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==
+  /supports-color/8.1.1:
+    dependencies:
+      has-flag: 4.0.0
+    dev: false
+    engines:
+      node: '>=10'
+    resolution:
+      integrity: sha512-MpUEN2OodtUzxvKQl72cUF7RQ5EiHsGvSsVG0ia9c5RbWGL2CI4C7EpPS8UTBIplnlzZiNuV56w+FuNxy3ty2Q==
   /tar-fs/2.1.1:
     dependencies:
       chownr: 1.1.4
@@ -4527,6 +4735,7 @@ specifiers:
   qrcode: ^1.4.4
   quick.db: ^7.1.2
   random-puppy: ^1.1.0
+  reaction-role: ^4.1.1
   request: ^2.88.2
   request-promise-native: ^1.0.9
   simple-youtube-api: ^5.2.1

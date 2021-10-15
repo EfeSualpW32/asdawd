@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
+const reactionRole = require('reaction-role')
 exports.run = async (client, msg, args) => {
 
 const radio = {
@@ -26,21 +27,18 @@ const radio = {
         .setColor("RANDOM")
         .addField("RADYO", ss)
         .setFooter(msg.author.username, msg.author.avatarURL());
+      let option1 = reactionRole.createOption("❎", msg.member.voice.channel.leave)
+ if (!msg.member.voice.channel) return msg.channel.send(new Discord.MessageEmbed()
+    .setColor('#C34E4E')
+    .setDescription('❎ | Sesli bir kanalda değilsin!'));
+    return msg.channel.send(new Discord.MessageEmbed()
+    .setColor('#C34E4E')
+    .setDescription('❎ | Radyo kapatıldı!'));
      msg.channel.send(embed);
           });
       
   });
-  if (args[1] === "kapat") {
- if (!msg.member.voice.channel) return msg.channel.send(new Discord.MessageEmbed()
-    .setColor('#C34E4E')
-    .setDescription('❎ | Sesli bir kanalda değilsin!'));
-
-    msg.member.voice.channel.leave()
-    return msg.channel.send(new Discord.MessageEmbed()
-    .setColor('#C34E4E')
-    .setDescription('❎ | Radyo kapatıldı!'));
- }
-};
+ };
 exports.conf = {
     enabled: true,
     guildOnly: false,
