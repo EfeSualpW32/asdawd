@@ -12,7 +12,7 @@ exports.run = async (client, message, args) => {
   }
   };
   let parapara = db.fetch(`para_${message.author.id}`)
-  if (!args[0]) return message.reply(new Discord.MessageEmbed().setColor("#36393f").setDescription(`Mevcut Markettekiler :\n Satın Almak İçin ${prefix}market (alınıcak meslek veya eşya)\n\n   **Paranız :** ${parapara}<:tl:891668420066672650>\n\n 🔪 **bıçak :** 4061<:tl:891668420066672650> \n 🔫 **silah :** 1.000.000<:tl:891668420066672650>\n 🏏 **haydar :** 1600<:tl:891668420066672650>\n\n __**MESLEK**__ ↓\n\n 🚕 **Taxici :** 1000<:tl:891668420066672650> Maaş: \`300\`\n 🚐 **Dolmuş :** 1500<:tl:891668420066672650> Maaş: \`600\`\n 👩‍🍳 **Aşçı :** 2200<:tl:891668420066672650> Maaş: \`1400\`\n 💰 **Kuyumcu :** 7000<:tl:891668420066672650> Maaş: \`3000\` \`\`\`bash\n \"Not\": Marketten Aldığınız Eşyalardan Fazla Almak Herhangi bişi ifade etmez \n\`\`\``))
+  if (!args[0]) return message.reply(new Discord.MessageEmbed().setColor("#36393f").setDescription(`Mevcut Markettekiler :\n Satın Almak İçin ${prefix}market (alınıcak meslek veya eşya)\n\n   **Paranız :** ${parapara}<:tl:891668420066672650>\n\n 🔪 **bıçak :** 7.000<:tl:891668420066672650> \n 🔫 **silah :** 1.000.000<:tl:891668420066672650>\n 🏏 **haydar :** 1.600<:tl:891668420066672650>\n\n __**MESLEK**__ ↓\n\n 🚕 **Taxici :** 1.000<:tl:891668420066672650> Maaş: \`300\`\n 🚐 **Dolmuş :** 1.500<:tl:891668420066672650> Maaş: \`600\`\n 👩‍🍳 **Aşçı :** 2.200<:tl:891668420066672650> Maaş: \`1400\`\n 💰 **Kuyumcu :** 7.000<:tl:891668420066672650> Maaş: \`3000\` \`\`\`bash\n \"Not\": Marketten Aldığınız Eşyalardan Fazla Almak Herhangi bişi ifade etmez \n\`\`\``))
   
   if (args[0] === 'silah') {
      db.add(`silah_${message.author.id}`, "1")
@@ -25,14 +25,14 @@ exports.run = async (client, message, args) => {
     db.set(`ìştebişiler_${message.author.id}`, "aktifdir")
     db.add(`para_${message.author.id}`, -fiyatcık)
     
-    return message.reply(`Ürünü Başarıyla Aldınız`)
+    return message.reply(new Discord.MessageEmbed().setImage('http://www.savunmasanayiidergilik.com/images/uploads/Tasarim/26_259184_ssdergilik.jpg').setTitle(`Ürünü Başarıyla Aldınız`))
   }
     if (!args[0]) return message.reply(`Mevcut Markettekiler : `)
   
   if (args[0] === 'bıçak') {
    db.add(`bıçak_${message.author.id}`, "1")
     let para = await db.get(`para_${message.author.id}`) 
-    let fiyatcık = 4061 // istediğiniz fiyat
+    let fiyatcık = 7000 // istediğiniz fiyat
     
     
     if (para < fiyatcık) return message.reply('Yeterli Paran Yok!')
@@ -40,7 +40,7 @@ exports.run = async (client, message, args) => {
     db.set(`ìştebişiler_${message.author.id}`, "aktifdir")
     db.add(`para_${message.author.id}`, -fiyatcık)
     
-    return message.reply(`Ürünü Başarıyla Aldınız`)
+    return message.reply(new Discord.MessageEmbed().setImage('https://productimages.hepsiburada.net/s/84/375/110000027224533.jpg').setTitle(`Ürünü Başarıyla Aldınız`))
   }
     if (args[0] === 'haydar') {
     db.add(`haydar_${message.author.id}`,"1")
@@ -53,7 +53,7 @@ exports.run = async (client, message, args) => {
     db.set(`ìştebişiler_${message.author.id}`, "aktifdir")
     db.add(`para_${message.author.id}`, -fiyatcık)
     
-    return message.reply(`Ürünü Başarıyla Aldınız`)
+    return message.reply(new Discord.MessageEmbed().setImage('https://foto.sondakika.com/haber/2013/07/18/dolmustan-alirim-aklini-yazili-sopa-cikti-4846162_o.jpg').setTitle(`Ürünü Başarıyla Aldınız`))
   }
   if (args[0] === 'taxici') {
     db.set(`taxici_${message.author.id}`,"Taxi Şöförü")
