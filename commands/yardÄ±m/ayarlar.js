@@ -24,7 +24,7 @@ var page = 0;
  
 let arr = [];
 let emojiarr = message.guild.emojis.cache.array();
-for(let i =0; Number(i + "0") < (Math.round(emojiarr.length/10)*10 +1); ++i) {
+for(let i =0; Number(i + "0") < (Math.round(emojiarr.length/10)*1 +1); ++i) {
 var on = emojiarr.slice(Number(i + "0"), Number(i + "0")+10)
 arr.push(on.toString())
 }
