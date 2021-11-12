@@ -69,7 +69,8 @@
     "tuval": "^0.0.155",
     "opusscript": "^0.0.8",
     "ffmpeg": "^0.0.4",
-    "reaction-role": "^4.1.1"
+    "reaction-role": "^4.1.1",
+    "burc-api": "^1.0.2"
   },
   "engines": {
     "node": "12.x"
